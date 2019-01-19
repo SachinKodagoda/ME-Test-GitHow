@@ -1,0 +1,42 @@
+#header
+  height: auto
+  .navbar
+    height: 46px
+    display: flex
+    transition: all 0.2s ease
+    background: $red
+    position: relative
+    .logo
+      width: 100%
+      color: #FFF
+      font-size: 20px
+      font-weight: 600
+      +text_center(46px)
+    .nav
+      +hidden
+      +clearfix
+      +MEDIUM
+        +show
+      .nav_item
+        width: 120px
+        height: 60px
+        float: left
+        +text_center(60px)
+      .button
+        width: 100%
+        height: 60px
+    #nav_toggle
+      position: absolute
+      right: 0
+      top: 0
+      width: 46px
+      height: 46px
+      +MEDIUM
+        +hidden
+
+      @import './source/sass/custom_sass/hamIcon/ham_icon1'
+
+
+
+
+

@@ -1,0 +1,8 @@
+
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW SSL_REDIRECT:wda-soft.com
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^wda-soft\.com$ [NC]
+RewriteRule ^(.*)$ https://wda-soft.com/$1 [L,R=301]
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE SSL_REDIRECT:wda-soft.com

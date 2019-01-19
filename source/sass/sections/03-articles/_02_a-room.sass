@@ -1,0 +1,80 @@
+.a-room
+    padding: 8px
+    &--one, &--two, &--three
+        padding: 8px
+
+.room-container
+    width: 100%
+    height: auto
+    border: 1px solid #ccc
+
+.room-header
+    background: yellow
+    &_img
+        width: 100%
+        height: auto
+        margin-bottom: -6px
+
+.room-body
+    padding-top: 16px
+    +MEDIUM
+        padding: 16px
+
+    &_topic
+        +clearfix
+        font-family: 'Playfair Display', serif
+        text-align: left
+        position: relative
+        height: 50px
+        padding: 0 16px
+        margin-bottom: 16px
+
+
+        &_star_cover
+            +clearfix
+            width: 80px
+            height: 20px
+        &_star
+            width: 15px
+            height: 15px
+            float: left
+        &_name
+            font-size: 20px
+
+        &_left
+            float: left
+            width: 70%
+            height: 50px
+        &_right
+            text-align: center
+            float: right
+            width: 30%
+            height: 50px
+            font-size: 28px
+            color: #ff6138
+            line-height: 50px
+            border-bottom: 2px solid #ff6138
+            &_span
+                font-size: 15px
+                color: #000
+
+    &_desc
+        font-size: 16px
+        padding-left: 16px
+        &_correct
+            width: 15px
+            height: 15px
+            margin-right: 10px
+
+    &_btn
+        @extend .btn
+        width: 50%
+        background: #ff6138
+        color: #FFF
+        text-align: center
+        height: 40px
+        line-height: 40px
+        font-size: 16px
+        margin: 16px auto
+        border-radius: 5px
+

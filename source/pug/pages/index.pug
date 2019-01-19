@@ -1,0 +1,407 @@
+doctype html
+html(lang='en')
+  head
+    include ../globals/head.pug
+  body
+    .top_wrapper
+      .top_container
+        .a-booking
+          .booking-bg
+            video.booking-video(playsinline="playsinline" loop='loop', muted='muted', autoplay='true')
+              source(src='assets/video/hotel.mp4', type='video/mp4')
+              | Your browser does not support the video tag.
+          img.booking-guest(src="assets/img/food.svg", alt="guest")
+          .booking-logo
+            .booking-cover
+              | TWIN
+              br
+              | SHIELD
+              br
+              | RESORT
+          .booking-details
+            .booking-details_wheather Srilanka, Colombo: 32 &#176;C
+            .booking-details_img_cover
+              img.booking-details_img(src="assets/img/sunny.svg", alt="sunny")
+              img.booking-details_img(src="assets/img/half-sunny.svg", alt="half-sunny")
+              img.booking-details_img(src="assets/img/windy.svg", alt="windy")
+              img.booking-details_img(src="assets/img/cloudy.svg", alt="cloudy")
+              img.booking-details_img(src="assets/img/rainny.svg", alt="rainny")
+              img.booking-details_img(src="assets/img/snowflake.svg", alt="snowflake")
+        .a-order
+          .order-container
+            form.order-form
+              .order-form-head
+                i.fa.fa-bed
+                lable BOOK NOW
+              .order-form-body
+                .order-form-group
+                  i.fa.fa-calendar-o
+                  lable CHECK IN
+                  input.order-form-group_input(type="date" placeholder="DD MM YYYY")
+                .order-form-group
+                  i.fa.fa-calendar-o
+                  lable CHECK OUT
+                  input.order-form-group_input(type="date" placeholder="DD MM YYYY")
+                .order-form-group
+                  i.fa.fa-male
+                  lable ADULTS
+                  input.order-form-group_input(type="number" value="1" name="Adults" min="1" max="6")
+                .order-form-group
+                  i.fa.fa-child
+                  lable KIDS
+                  input.order-form-group_input(type="number" value="0" name="Kids" min="0" max="6")
+                .order-form-group
+                  i.fa.fa-bed
+                  lable ROOM TYPE
+                  select.order-form-group_select
+                    option(value='single') single
+                    option(value='double') double
+                    option(value='deluxe') deluxe
+                .order-form-search-btn
+                  i.fa.fa-search
+                  span.order-btn-margin Search Availability
+
+
+
+        .a-room.row
+          .a-room--one.col.s12.l4
+            .room-container
+              .room-header
+                img.room-header_img(src="assets/img/img_1.jpg", alt="room_1")
+              .room-body
+                .room-body_topic
+                  .room-body_topic_left
+                    .room-body_topic_star_cover
+                      img.room-body_topic_star(src="assets/img/full-star.svg", alt="s")
+                      img.room-body_topic_star(src="assets/img/full-star.svg", alt="s")
+                      img.room-body_topic_star(src="assets/img/full-star.svg", alt="s")
+                      img.room-body_topic_star(src="assets/img/full-star.svg", alt="s")
+                      img.room-body_topic_star(src="assets/img/half-star.svg", alt="s")
+                    .room-body_topic_name Single Room
+                  .room-body_topic_right
+                    | $99
+                    span.room-body_topic_right_span /night
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s") 
+                  | Perfect for traveling couples
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s") 
+                  | Breakfast included
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s") 
+                  | Two double beds
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s") 
+                  | Baby sitting facilities
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s") 
+                  | Free wifi
+                .room-body_btn
+                  | Reserve a room
+          .a-room--two.col.s12.l4
+            .room-container
+              .room-header
+                img.room-header_img(src="assets/img/img_2.jpg", alt="room_2")
+              .room-body
+                .room-body_topic
+                  .room-body_topic_left
+                    .room-body_topic_star_cover
+                      img.room-body_topic_star(src="assets/img/full-star.svg", alt="s")
+                      img.room-body_topic_star(src="assets/img/full-star.svg", alt="s")
+                      img.room-body_topic_star(src="assets/img/full-star.svg", alt="s")
+                      img.room-body_topic_star(src="assets/img/full-star.svg", alt="s")
+                      img.room-body_topic_star(src="assets/img/half-star.svg", alt="s")
+                    .room-body_topic_name Double Room
+                  .room-body_topic_right
+                    | $99
+                    span.room-body_topic_right_span /night
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s") 
+                  | Perfect for traveling couples
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s") 
+                  | Breakfast included
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s") 
+                  | Two double beds
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s") 
+                  | Baby sitting facilities
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s") 
+                  | Free wifi
+                .room-body_btn
+                  | Choose Room
+          .a-room--three.col.s12.l4
+            .room-container
+              .room-header
+                img.room-header_img(src="assets/img/img_3.jpg", alt="room_3")
+              .room-body
+                .room-body_topic
+                  .room-body_topic_left
+                    .room-body_topic_star_cover
+                      img.room-body_topic_star(src="assets/img/full-star.svg", alt="s")
+                      img.room-body_topic_star(src="assets/img/full-star.svg", alt="s")
+                      img.room-body_topic_star(src="assets/img/full-star.svg", alt="s")
+                      img.room-body_topic_star(src="assets/img/full-star.svg", alt="s")
+                      img.room-body_topic_star(src="assets/img/half-star.svg", alt="s")
+                    .room-body_topic_name Deluxe Room
+                  .room-body_topic_right
+                    | $99
+                    span.room-body_topic_right_span /night
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s")
+                  | Perfect for traveling couples
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s")
+                  | Breakfast included
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s")
+                  | Two double beds
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s")
+                  | Baby sitting facilities
+                .room-body_desc
+                  img.room-body_desc_correct(src="assets/img/correct.svg", alt="s")
+                  | Free wifi
+                .room-body_btn
+                  | Choose Room
+
+        .a-conference
+          .a-conference-bg
+          .a-conference-body
+            .a-conference-body_line1 OUR CONFERENCE CENTER
+            .a-conference-body_line2 Check it now
+            .a-conference-body_btn View more details
+
+        .a-food
+          .food-container
+            .food-head OUR MENU
+            .food-subhead Restaurant & Bar
+            .food-body
+              .food-body-topic
+                .food-body-topic_menu
+                  img.food-body-topic_menu_img(src="assets/img/menu.svg", alt="s")
+                  | Main
+                .food-body-topic_menu
+                  img.food-body-topic_menu_img(src="assets/img/fruits.svg", alt="s")
+                  | Dessert
+                .food-body-topic_menu.food_sp_r_margin_topic
+                  img.food-body-topic_menu_img(src="assets/img/beverage.svg", alt="s")
+                  | Drinks
+
+              .food-body-item-cover
+                .food-body-item-subcover
+                  .food-body-item
+                    .food-body-item_left
+                      img.food-body-item_left_img(src="assets/img/food_item.jpg", alt="s")
+                    .food-body-item_middle
+                      .food-body-item_middle_content Grilled Beef with potatoes
+                        .food-body-item_middle_sub_content Meat, Potatoes, Rice, Tomatoe
+                    .food-body-item_right
+                      .food-body-item_right_content $29
+                  .food-body-item.food_sp_r_margin_body
+                    .food-body-item_left
+                      img.food-body-item_left_img(src="assets/img/food_item.jpg", alt="s")
+                    .food-body-item_middle
+                      .food-body-item_middle_content Fruit Vanilla Ice Cream
+                        .food-body-item_middle_sub_content Meat, Potatoes, Rice, Tomatoe
+                    .food-body-item_right
+                      .food-body-item_right_content $29
+                .food-body-item-subcover
+                  .food-body-item
+                    .food-body-item_left
+                      img.food-body-item_left_img(src="assets/img/food_item.jpg", alt="s")
+                    .food-body-item_middle
+                      .food-body-item_middle_content Asian Hoisin Pork
+                        .food-body-item_middle_sub_content Meat, Potatoes, Rice, Tomatoe
+                    .food-body-item_right
+                      .food-body-item_right_content $29
+                  .food-body-item
+                    .food-body-item_left
+                      img.food-body-item_left_img(src="assets/img/food_item.jpg", alt="s")
+                    .food-body-item_middle
+                      .food-body-item_middle_content Spicy Fried Rice & Bacon
+                        .food-body-item_middle_sub_content Meat, Potatoes, Rice, Tomatoe
+                    .food-body-item_right
+                      .food-body-item_right_content $29
+                .food-body-item-subcover
+                  .food-body-item
+                    .food-body-item_left
+                      img.food-body-item_left_img(src="assets/img/food_item.jpg", alt="s")
+                    .food-body-item_middle
+                      .food-body-item_middle_content Grilled Beef with potatoes
+                        .food-body-item_middle_sub_content Meat, Potatoes, Rice, Tomatoe
+                    .food-body-item_right
+                      .food-body-item_right_content $29
+                  .food-body-item.food_sp_r_margin_body
+                    .food-body-item_left
+                      img.food-body-item_left_img(src="assets/img/food_item.jpg", alt="s")
+                    .food-body-item_middle
+                      .food-body-item_middle_content Fruit Vanilla Ice Cream
+                        .food-body-item_middle_sub_content Meat, Potatoes, Rice, Tomatoe
+                    .food-body-item_right
+                      .food-body-item_right_content $29
+                .food-body-item-subcover
+                  .food-body-item
+                    .food-body-item_left
+                      img.food-body-item_left_img(src="assets/img/food_item.jpg", alt="s")
+                    .food-body-item_middle
+                      .food-body-item_middle_content Asian Hoisin Pork
+                        .food-body-item_middle_sub_content Meat, Potatoes, Rice, Tomatoe
+                    .food-body-item_right
+                      .food-body-item_right_content $29
+                  .food-body-item
+                    .food-body-item_left
+                      img.food-body-item_left_img(src="assets/img/food_item.jpg", alt="s")
+                    .food-body-item_middle
+                      .food-body-item_middle_content Spicy Fried Rice & Bacon
+                        .food-body-item_middle_sub_content Meat, Potatoes, Rice, Tomatoe
+                    .food-body-item_right
+                      .food-body-item_right_content $29
+                .food-body-item-subcover
+                  .food-body-item
+                    .food-body-item_left
+                      img.food-body-item_left_img(src="assets/img/food_item.jpg", alt="s")
+                    .food-body-item_middle
+                      .food-body-item_middle_content Grilled Beef with potatoes
+                        .food-body-item_middle_sub_content Meat, Potatoes, Rice, Tomatoe
+                    .food-body-item_right
+                      .food-body-item_right_content $29
+                  .food-body-item.food_sp_r_margin_body
+                    .food-body-item_left
+                      img.food-body-item_left_img(src="assets/img/food_item.jpg", alt="s")
+                    .food-body-item_middle
+                      .food-body-item_middle_content Fruit Vanilla Ice Cream
+                        .food-body-item_middle_sub_content Meat, Potatoes, Rice, Tomatoe
+                    .food-body-item_right
+                      .food-body-item_right_content $29
+        .a-hotel.row
+                .col.s12.m6
+                  .row
+                    .col.s12
+                      .hotel-body
+                        img.hotel-body_img(src="assets/img/img_5.jpg", alt="location")
+                        .hotel-body_desc X'mas Parties
+                .col.s12.m6
+                  .row
+                    .row
+                      .hotel-body.col.s12.m6
+                        img.hotel-body_img(src="assets/img/img_6.jpg", alt="location")
+                        .hotel-body_desc Food
+                      .hotel-body.col.s12.m6
+                        img.hotel-body_img(src="assets/img/img_7.jpg", alt="location")
+                        .hotel-body_desc  Drinks
+                    .row
+                      .hotel-body.col.s12.m6
+                        img.hotel-body_img(src="assets/img/img_8.jpg", alt="location")
+                        .hotel-body_desc Swimming
+                      .hotel-body.col.s12.m6
+                        img.hotel-body_img(src="assets/img/img_9.jpg", alt="location")
+                        .hotel-body_desc DJ
+        .a-event
+          .event-container
+            .event-container-sub_left
+              img.event-container-sub_left_img(src="assets/img/events.png", alt="location")
+            .event-container-sub_right
+              .event-item
+                .event-item_calender_cover
+                  .event-item_calender
+                    .event-item_calender_date 12
+                    .event-item_calender_month JANUARY
+                    .event-item_calender_year 2019
+                .event-item_details
+                  .event-item_topic Big summer meetups
+                  .event-item_dec
+                    | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts
+                  .event-item_dec_btn_cover
+                    .event-item_dec_btn_join join event
+                    .event-item_dec_btn_details see details
+              .event-item.event_no_margin_bottom
+                .event-item_calender_cover
+                  .event-item_calender
+                    .event-item_calender_date 12
+                    .event-item_calender_month JANUARY
+                    .event-item_calender_year 2019
+                .event-item_details
+                  .event-item_topic Big summer meetups
+                  .event-item_dec
+                    | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts
+                  .event-item_dec_btn_cover
+                    .event-item_dec_btn_join join event
+                    .event-item_dec_btn_details see details
+        .a-subscribe
+          .subscribe-container
+            .subscribe-head Get the best offers first!
+            form.subscribe-form
+              .subscribe-form_group
+                input.subscribe-form_group_input(type="text" placeholder="Your Email Address")
+            .subscribe-btn Subscribe
+
+        .a-contact
+            .contact-container
+              .contact-head Contact
+              .contact-body
+                | If you have any questions, do not hesitate to ask them.
+                form.contact-form
+                  .contact-form_group
+                    input.contact-form_group_input(type="text" placeholder="Name")
+                  .contact-form_group
+                    input.contact-form_group_input(type="Email" placeholder="Email")
+                  .contact-form_group
+                    input.contact-form_group_input(type="text" placeholder="Message")
+              .contact-btn Send Message
+
+        .footer
+          .f-container
+            .f-item
+              .f-item_head TWIN SHIELD RESORT
+              .f-item_body
+                | Far far away, behind the word mountains,
+                | far from the countries Vokalia and Consonantia,
+                | there live the blind texts.
+
+            .f-item
+              .f-item_head Opening Hours
+              .f-item_body
+                .f-item_date
+                  | Monday:
+                  span.f-item_range 08: - 22:00
+                .f-item_date
+                  | Tuesday:
+                  span.f-item_range 08: - 22:00
+                .f-item_date
+                  | Wednesday:
+                  span.f-item_range 08: - 22:00
+                .f-item_date
+                  | Thursday:
+                  span.f-item_range 08: - 22:00
+                .f-item_date
+                  | Friday:
+                  span.f-item_range 08: - 22:00
+                .f-item_date
+                  | Saturday:
+                  span.f-item_range 08: - 22:00
+                .f-item_date
+                  | Sunday:
+                  span.f-item_range 08: - 22:00
+            .f-item
+              .f-item_head Contact Information
+              .f-item_body
+                .f-item_address
+                  | 198 West 21th Street,
+                .f-item_address
+                  | Suite 721 New York NY 10016,
+                .f-item_address
+                  | + 1235 2355 98
+                .f-item_address
+                  | info@yoursite.com
+                .f-item_address
+                  | email@email.com
+            .f-item
+              .f-item_head Newsletter
+              .f-item_body
+                | Far far away, behind the word mountains, far from the countries.
+          .f-rights
+            | Copyright ©2018 All rights reserved Nishadi
+    script(src='./assets/js/app.js')

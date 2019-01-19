@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hotel Booking</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="author" content="Sachin Kodagoda">
+    <meta name="keywords" content="Hotel, Booking">
+    <meta name="description" content="booking hotels">
+    <meta name="theme-color" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <div class="top_wrapper">
+      <div class="top_container">
+        <div class="a-booking">
+          <div class="booking-bg">
+            <video class="booking-video" playsinline="playsinline" loop="loop" muted="muted" autoplay="true">
+              <source src="assets/video/hotel.mp4" type="video/mp4">Your browser does not support the video tag.
+            </video>
+          </div><img class="booking-guest" src="assets/img/food.svg" alt="guest">
+          <div class="booking-logo">
+            <div class="booking-cover">TWIN<br>SHIELD<br>RESORT</div>
+          </div>
+          <div class="booking-details">
+            <div class="booking-details_wheather">Srilanka, Colombo: 32 &#176;C</div>
+            <div class="booking-details_img_cover"><img class="booking-details_img" src="assets/img/sunny.svg" alt="sunny"><img class="booking-details_img" src="assets/img/half-sunny.svg" alt="half-sunny"><img class="booking-details_img" src="assets/img/windy.svg" alt="windy"><img class="booking-details_img" src="assets/img/cloudy.svg" alt="cloudy"><img class="booking-details_img" src="assets/img/rainny.svg" alt="rainny"><img class="booking-details_img" src="assets/img/snowflake.svg" alt="snowflake"></div>
+          </div>
+        </div>
+        <div class="a-order">
+          <div class="order-container">
+            <form class="order-form">
+              <div class="order-form-head"><i class="fa fa-bed"></i>
+                <lable>BOOK NOW</lable>
+              </div>
+              <div class="order-form-body">
+                <div class="order-form-group"><i class="fa fa-calendar-o"></i>
+                  <lable>CHECK IN</lable>
+                  <input class="order-form-group_input" type="date" placeholder="DD MM YYYY">
+                </div>
+                <div class="order-form-group"><i class="fa fa-calendar-o"></i>
+                  <lable>CHECK OUT</lable>
+                  <input class="order-form-group_input" type="date" placeholder="DD MM YYYY">
+                </div>
+                <div class="order-form-group"><i class="fa fa-male"></i>
+                  <lable>ADULTS</lable>
+                  <input class="order-form-group_input" type="number" value="1" name="Adults" min="1" max="6">
+                </div>
+                <div class="order-form-group"><i class="fa fa-child"></i>
+                  <lable>KIDS</lable>
+                  <input class="order-form-group_input" type="number" value="0" name="Kids" min="0" max="6">
+                </div>
+                <div class="order-form-group"><i class="fa fa-bed"></i>
+                  <lable>ROOM TYPE</lable>
+                  <select class="order-form-group_select">
+                    <option value="single">single</option>
+                    <option value="double">double</option>
+                    <option value="deluxe">deluxe</option>
+                  </select>
+                </div>
+                <div class="order-form-search-btn"><i class="fa fa-search"></i><span class="order-btn-margin">Search Availability</span></div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="a-room row">
+          <div class="a-room--one col s12 l4">
+            <div class="room-container">
+              <div class="room-header"><img class="room-header_img" src="assets/img/img_1.jpg" alt="room_1"></div>
+              <div class="room-body">
+                <div class="room-body_topic">
+                  <div class="room-body_topic_left">
+                    <div class="room-body_topic_star_cover"><img class="room-body_topic_star" src="assets/img/full-star.svg" alt="s"><img class="room-body_topic_star" src="assets/img/full-star.svg" alt="s"><img class="room-body_topic_star" src="assets/img/full-star.svg" alt="s"><img class="room-body_topic_star" src="assets/img/full-star.svg" alt="s"><img class="room-body_topic_star" src="assets/img/half-star.svg" alt="s"></div>
+                    <div class="room-body_topic_name">Single Room</div>
+                  </div>
+                  <div class="room-body_topic_right">$99<span class="room-body_topic_right_span">/night</span></div>
+                </div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Perfect for traveling couples</div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Breakfast included</div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Two double beds</div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Baby sitting facilities</div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Free wifi</div>
+                <div class="room-body_btn">Reserve a room</div>
+              </div>
+            </div>
+          </div>
+          <div class="a-room--two col s12 l4">
+            <div class="room-container">
+              <div class="room-header"><img class="room-header_img" src="assets/img/img_2.jpg" alt="room_2"></div>
+              <div class="room-body">
+                <div class="room-body_topic">
+                  <div class="room-body_topic_left">
+                    <div class="room-body_topic_star_cover"><img class="room-body_topic_star" src="assets/img/full-star.svg" alt="s"><img class="room-body_topic_star" src="assets/img/full-star.svg" alt="s"><img class="room-body_topic_star" src="assets/img/full-star.svg" alt="s"><img class="room-body_topic_star" src="assets/img/full-star.svg" alt="s"><img class="room-body_topic_star" src="assets/img/half-star.svg" alt="s"></div>
+                    <div class="room-body_topic_name">Double Room</div>
+                  </div>
+                  <div class="room-body_topic_right">$99<span class="room-body_topic_right_span">/night</span></div>
+                </div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Perfect for traveling couples</div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Breakfast included</div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Two double beds</div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Baby sitting facilities</div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Free wifi</div>
+                <div class="room-body_btn">Choose Room</div>
+              </div>
+            </div>
+          </div>
+          <div class="a-room--three col s12 l4">
+            <div class="room-container">
+              <div class="room-header"><img class="room-header_img" src="assets/img/img_3.jpg" alt="room_3"></div>
+              <div class="room-body">
+                <div class="room-body_topic">
+                  <div class="room-body_topic_left">
+                    <div class="room-body_topic_star_cover"><img class="room-body_topic_star" src="assets/img/full-star.svg" alt="s"><img class="room-body_topic_star" src="assets/img/full-star.svg" alt="s"><img class="room-body_topic_star" src="assets/img/full-star.svg" alt="s"><img class="room-body_topic_star" src="assets/img/full-star.svg" alt="s"><img class="room-body_topic_star" src="assets/img/half-star.svg" alt="s"></div>
+                    <div class="room-body_topic_name">Deluxe Room</div>
+                  </div>
+                  <div class="room-body_topic_right">$99<span class="room-body_topic_right_span">/night</span></div>
+                </div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Perfect for traveling couples</div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Breakfast included</div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Two double beds</div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Baby sitting facilities</div>
+                <div class="room-body_desc"><img class="room-body_desc_correct" src="assets/img/correct.svg" alt="s">Free wifi</div>
+                <div class="room-body_btn">Choose Room</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="a-conference">
+          <div class="a-conference-bg"></div>
+          <div class="a-conference-body">
+            <div class="a-conference-body_line1">OUR CONFERENCE CENTER</div>
+            <div class="a-conference-body_line2">Check it now</div>
+            <div class="a-conference-body_btn">View more details</div>
+          </div>
+        </div>
+        <div class="a-food">
+          <div class="food-container">
+            <div class="food-head">OUR MENU</div>
+            <div class="food-subhead">Restaurant & Bar</div>
+            <div class="food-body">
+              <div class="food-body-topic">
+                <div class="food-body-topic_menu"><img class="food-body-topic_menu_img" src="assets/img/menu.svg" alt="s">Main</div>
+                <div class="food-body-topic_menu"><img class="food-body-topic_menu_img" src="assets/img/fruits.svg" alt="s">Dessert</div>
+                <div class="food-body-topic_menu food_sp_r_margin_topic"><img class="food-body-topic_menu_img" src="assets/img/beverage.svg" alt="s">Drinks</div>
+              </div>
+              <div class="food-body-item-cover">
+                <div class="food-body-item-subcover">
+                  <div class="food-body-item">
+                    <div class="food-body-item_left"><img class="food-body-item_left_img" src="assets/img/food_item.jpg" alt="s"></div>
+                    <div class="food-body-item_middle">
+                      <div class="food-body-item_middle_content">Grilled Beef with potatoes
+                        <div class="food-body-item_middle_sub_content">Meat, Potatoes, Rice, Tomatoe</div>
+                      </div>
+                    </div>
+                    <div class="food-body-item_right">
+                      <div class="food-body-item_right_content">$29</div>
+                    </div>
+                  </div>
+                  <div class="food-body-item food_sp_r_margin_body">
+                    <div class="food-body-item_left"><img class="food-body-item_left_img" src="assets/img/food_item.jpg" alt="s"></div>
+                    <div class="food-body-item_middle">
+                      <div class="food-body-item_middle_content">Fruit Vanilla Ice Cream
+                        <div class="food-body-item_middle_sub_content">Meat, Potatoes, Rice, Tomatoe</div>
+                      </div>
+                    </div>
+                    <div class="food-body-item_right">
+                      <div class="food-body-item_right_content">$29</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="food-body-item-subcover">
+                  <div class="food-body-item">
+                    <div class="food-body-item_left"><img class="food-body-item_left_img" src="assets/img/food_item.jpg" alt="s"></div>
+                    <div class="food-body-item_middle">
+                      <div class="food-body-item_middle_content">Asian Hoisin Pork
+                        <div class="food-body-item_middle_sub_content">Meat, Potatoes, Rice, Tomatoe</div>
+                      </div>
+                    </div>
+                    <div class="food-body-item_right">
+                      <div class="food-body-item_right_content">$29</div>
+                    </div>
+                  </div>
+                  <div class="food-body-item">
+                    <div class="food-body-item_left"><img class="food-body-item_left_img" src="assets/img/food_item.jpg" alt="s"></div>
+                    <div class="food-body-item_middle">
+                      <div class="food-body-item_middle_content">Spicy Fried Rice & Bacon
+                        <div class="food-body-item_middle_sub_content">Meat, Potatoes, Rice, Tomatoe</div>
+                      </div>
+                    </div>
+                    <div class="food-body-item_right">
+                      <div class="food-body-item_right_content">$29</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="food-body-item-subcover">
+                  <div class="food-body-item">
+                    <div class="food-body-item_left"><img class="food-body-item_left_img" src="assets/img/food_item.jpg" alt="s"></div>
+                    <div class="food-body-item_middle">
+                      <div class="food-body-item_middle_content">Grilled Beef with potatoes
+                        <div class="food-body-item_middle_sub_content">Meat, Potatoes, Rice, Tomatoe</div>
+                      </div>
+                    </div>
+                    <div class="food-body-item_right">
+                      <div class="food-body-item_right_content">$29</div>
+                    </div>
+                  </div>
+                  <div class="food-body-item food_sp_r_margin_body">
+                    <div class="food-body-item_left"><img class="food-body-item_left_img" src="assets/img/food_item.jpg" alt="s"></div>
+                    <div class="food-body-item_middle">
+                      <div class="food-body-item_middle_content">Fruit Vanilla Ice Cream
+                        <div class="food-body-item_middle_sub_content">Meat, Potatoes, Rice, Tomatoe</div>
+                      </div>
+                    </div>
+                    <div class="food-body-item_right">
+                      <div class="food-body-item_right_content">$29</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="food-body-item-subcover">
+                  <div class="food-body-item">
+                    <div class="food-body-item_left"><img class="food-body-item_left_img" src="assets/img/food_item.jpg" alt="s"></div>
+                    <div class="food-body-item_middle">
+                      <div class="food-body-item_middle_content">Asian Hoisin Pork
+                        <div class="food-body-item_middle_sub_content">Meat, Potatoes, Rice, Tomatoe</div>
+                      </div>
+                    </div>
+                    <div class="food-body-item_right">
+                      <div class="food-body-item_right_content">$29</div>
+                    </div>
+                  </div>
+                  <div class="food-body-item">
+                    <div class="food-body-item_left"><img class="food-body-item_left_img" src="assets/img/food_item.jpg" alt="s"></div>
+                    <div class="food-body-item_middle">
+                      <div class="food-body-item_middle_content">Spicy Fried Rice & Bacon
+                        <div class="food-body-item_middle_sub_content">Meat, Potatoes, Rice, Tomatoe</div>
+                      </div>
+                    </div>
+                    <div class="food-body-item_right">
+                      <div class="food-body-item_right_content">$29</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="food-body-item-subcover">
+                  <div class="food-body-item">
+                    <div class="food-body-item_left"><img class="food-body-item_left_img" src="assets/img/food_item.jpg" alt="s"></div>
+                    <div class="food-body-item_middle">
+                      <div class="food-body-item_middle_content">Grilled Beef with potatoes
+                        <div class="food-body-item_middle_sub_content">Meat, Potatoes, Rice, Tomatoe</div>
+                      </div>
+                    </div>
+                    <div class="food-body-item_right">
+                      <div class="food-body-item_right_content">$29</div>
+                    </div>
+                  </div>
+                  <div class="food-body-item food_sp_r_margin_body">
+                    <div class="food-body-item_left"><img class="food-body-item_left_img" src="assets/img/food_item.jpg" alt="s"></div>
+                    <div class="food-body-item_middle">
+                      <div class="food-body-item_middle_content">Fruit Vanilla Ice Cream
+                        <div class="food-body-item_middle_sub_content">Meat, Potatoes, Rice, Tomatoe</div>
+                      </div>
+                    </div>
+                    <div class="food-body-item_right">
+                      <div class="food-body-item_right_content">$29</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="a-hotel row">
+          <div class="col s12 m6">
+            <div class="row">
+              <div class="col s12">
+                <div class="hotel-body"><img class="hotel-body_img" src="assets/img/img_5.jpg" alt="location">
+                  <div class="hotel-body_desc">X'mas Parties</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="row">
+              <div class="row">
+                <div class="hotel-body col s12 m6"><img class="hotel-body_img" src="assets/img/img_6.jpg" alt="location">
+                  <div class="hotel-body_desc">Food</div>
+                </div>
+                <div class="hotel-body col s12 m6"><img class="hotel-body_img" src="assets/img/img_7.jpg" alt="location">
+                  <div class="hotel-body_desc"> Drinks</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="hotel-body col s12 m6"><img class="hotel-body_img" src="assets/img/img_8.jpg" alt="location">
+                  <div class="hotel-body_desc">Swimming</div>
+                </div>
+                <div class="hotel-body col s12 m6"><img class="hotel-body_img" src="assets/img/img_9.jpg" alt="location">
+                  <div class="hotel-body_desc">DJ</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="a-event">
+          <div class="event-container">
+            <div class="event-container-sub_left"><img class="event-container-sub_left_img" src="assets/img/events.png" alt="location"></div>
+            <div class="event-container-sub_right">
+              <div class="event-item">
+                <div class="event-item_calender_cover">
+                  <div class="event-item_calender">
+                    <div class="event-item_calender_date">12</div>
+                    <div class="event-item_calender_month">JANUARY</div>
+                    <div class="event-item_calender_year">2019</div>
+                  </div>
+                </div>
+                <div class="event-item_details">
+                  <div class="event-item_topic">Big summer meetups</div>
+                  <div class="event-item_dec">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</div>
+                  <div class="event-item_dec_btn_cover">
+                    <div class="event-item_dec_btn_join">join event</div>
+                    <div class="event-item_dec_btn_details">see details</div>
+                  </div>
+                </div>
+              </div>
+              <div class="event-item event_no_margin_bottom">
+                <div class="event-item_calender_cover">
+                  <div class="event-item_calender">
+                    <div class="event-item_calender_date">12</div>
+                    <div class="event-item_calender_month">JANUARY</div>
+                    <div class="event-item_calender_year">2019</div>
+                  </div>
+                </div>
+                <div class="event-item_details">
+                  <div class="event-item_topic">Big summer meetups</div>
+                  <div class="event-item_dec">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</div>
+                  <div class="event-item_dec_btn_cover">
+                    <div class="event-item_dec_btn_join">join event</div>
+                    <div class="event-item_dec_btn_details">see details</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="a-subscribe">
+          <div class="subscribe-container">
+            <div class="subscribe-head">Get the best offers first!</div>
+            <form class="subscribe-form">
+              <div class="subscribe-form_group">
+                <input class="subscribe-form_group_input" type="text" placeholder="Your Email Address">
+              </div>
+            </form>
+            <div class="subscribe-btn">Subscribe</div>
+          </div>
+        </div>
+        <div class="a-contact">
+          <div class="contact-container">
+            <div class="contact-head">Contact</div>
+            <div class="contact-body">If you have any questions, do not hesitate to ask them.
+              <form class="contact-form">
+                <div class="contact-form_group">
+                  <input class="contact-form_group_input" type="text" placeholder="Name">
+                </div>
+                <div class="contact-form_group">
+                  <input class="contact-form_group_input" type="Email" placeholder="Email">
+                </div>
+                <div class="contact-form_group">
+                  <input class="contact-form_group_input" type="text" placeholder="Message">
+                </div>
+              </form>
+            </div>
+            <div class="contact-btn">Send Message</div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="f-container">
+            <div class="f-item">
+              <div class="f-item_head">TWIN SHIELD RESORT</div>
+              <div class="f-item_body">
+                Far far away, behind the word mountains,
+                far from the countries Vokalia and Consonantia,
+                there live the blind texts.
+              </div>
+            </div>
+            <div class="f-item">
+              <div class="f-item_head">Opening Hours</div>
+              <div class="f-item_body">
+                <div class="f-item_date">Monday:<span class="f-item_range">08: - 22:00</span></div>
+                <div class="f-item_date">Tuesday:<span class="f-item_range">08: - 22:00</span></div>
+                <div class="f-item_date">Wednesday:<span class="f-item_range">08: - 22:00</span></div>
+                <div class="f-item_date">Thursday:<span class="f-item_range">08: - 22:00</span></div>
+                <div class="f-item_date">Friday:<span class="f-item_range">08: - 22:00</span></div>
+                <div class="f-item_date">Saturday:<span class="f-item_range">08: - 22:00</span></div>
+                <div class="f-item_date">Sunday:<span class="f-item_range">08: - 22:00</span></div>
+              </div>
+            </div>
+            <div class="f-item">
+              <div class="f-item_head">Contact Information</div>
+              <div class="f-item_body">
+                <div class="f-item_address">198 West 21th Street,</div>
+                <div class="f-item_address">Suite 721 New York NY 10016,</div>
+                <div class="f-item_address">+ 1235 2355 98</div>
+                <div class="f-item_address">info@yoursite.com</div>
+                <div class="f-item_address">email@email.com</div>
+              </div>
+            </div>
+            <div class="f-item">
+              <div class="f-item_head">Newsletter</div>
+              <div class="f-item_body">Far far away, behind the word mountains, far from the countries.</div>
+            </div>
+          </div>
+          <div class="f-rights">Copyright ©2018 All rights reserved Nishadi</div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

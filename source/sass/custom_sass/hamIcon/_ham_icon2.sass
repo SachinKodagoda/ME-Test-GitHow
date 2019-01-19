@@ -1,0 +1,32 @@
+.ham_cover
+    position: absolute
+    height: 14px
+    width: 24px
+    cursor: pointer
+    +tap_highlight_issue
+    +perfect_center
+
+#ham_top
+    +ham_icon
+    top: 0
+    transition: .25s ease-in-out
+    &.cross
+        transform: rotate(135deg) scaleX(1) translateY(-8px)
+
+#ham_mid
+    +ham_icon
+    top: calc(50% - 1px)
+    transform: rotate(0deg)
+    transition: .25s ease-in-out;
+    &.cross
+        opacity: 0
+        left: -20px
+        // transform: scaleX(0)
+
+#ham_bot
+    +ham_icon
+    bottom:  0
+    transition: .25s ease-in-out;
+    &.cross
+        transform: rotate(-135deg) scaleX(1) translateY(8px)
+

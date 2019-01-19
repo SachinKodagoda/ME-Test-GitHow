@@ -1,0 +1,111 @@
+.a-event
+    padding: 32px 16px
+    font-size: 16px
+    font-weight: 400
+    font-family: Raleway,Arial,Helvetica,sans-serif
+    
+.event
+    &-container
+        +clearfix
+        +XLARGE
+            display: flex
+            justify-content: center
+            border: 1px solid #000
+        &-sub_left
+            background: #FBFBFB
+            width: 100%
+            height: auto
+            +XLARGE
+                width: 50%
+                // padding: 60px 0
+            &_img
+                width: 100%
+                height: auto
+                vertical-align: middle
+                +XLARGE
+                    position: relative
+                    top: 50%
+                    transform: translateY(-50%)
+        &-sub_right
+            background: #FBFBFB
+            border: none
+            width: 100%
+            +XLARGE
+                border-left: 1px dashed #000
+                width: 50%
+                padding: 60px 16px
+    &-item
+        +clearfix
+        margin-bottom: 50px
+        display: flex
+        justify-content: center
+        &_topic
+            +break_words
+            font-size: 28px
+            font-family: "Playfair Display", Georgia, serif
+        &_calender
+            padding: 5px
+            width: auto
+            height: auto
+            background: #FAFAFA
+            text-align: center
+            &_date
+                font-size: 30px
+                color: #FF6138
+        &_details
+            padding: 0 16px
+        &_dec
+            color: #86868D
+            &_btn_cover
+                +clearfix
+            &_btn_join
+                float: left
+                @extend .btn
+                user-select: none
+                font-size: 14px
+                line-height: 1.5
+                border-radius: 4px
+                box-shadow: none
+                background: #ff6138
+                border: 2px solid #ff6138
+                color: #fff
+                font-size: 14px
+                width: 100px
+                display: inline-block
+                font-weight: 400
+                text-align: center
+                white-space: nowrap
+                vertical-align: middle
+                padding: 6px 12px
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+                &:hover
+                    background: #ffffff
+                    color: #ff6138
+            &_btn_details
+                float: left
+                margin-left: 10px
+                @extend .btn
+                user-select: none
+                font-size: 14px
+                line-height: 1.5
+                border-radius: 4px
+                box-shadow: none
+                color: #ff6138
+                border: 2px solid #ff6138
+                background: #fff
+                font-size: 14px
+                width: 100px
+                display: inline-block
+                font-weight: 400
+                text-align: center
+                white-space: nowrap
+                vertical-align: middle
+                padding: 6px 12px
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+                &:hover
+                    color: #ffffff
+                    background: #ff6138
+
+.event_no_margin_bottom
+    +XLARGE
+        margin-bottom: 0

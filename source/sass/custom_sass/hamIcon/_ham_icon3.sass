@@ -1,0 +1,46 @@
+.ham_cover
+    position: absolute
+    height: 14px
+    width: 24px
+    cursor: pointer
+    +tap_highlight_issue
+    +perfect_center
+
+#ham_top
+    +ham_icon
+    top: 0
+    transition: all .25s ease-in-out
+    &.cross
+        opacity: 0
+        width: 0
+        transform: translate(20px, 5px)
+
+#ham_mid1
+    +ham_icon
+    top: calc(50% - 1px)
+    transform: rotate(0deg)
+    transition: all .25s ease-in-out
+    &.cross
+        transform: rotate(-45deg)
+
+#ham_mid2
+    +ham_icon
+    top: calc(50% - 1px)
+    transform: rotate(0deg)
+    transition: all .25s ease-in-out
+    &.cross
+        transform: rotate(45deg)
+
+
+#ham_bot
+    +ham_icon
+    bottom: 0
+    transition: all .25s ease-in-out
+    &.cross
+        opacity: 0
+        width: 0
+        transform: translate(20px, -5px)
+
+    
+      
+
