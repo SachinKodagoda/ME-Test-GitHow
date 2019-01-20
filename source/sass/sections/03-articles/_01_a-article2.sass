@@ -1,7 +1,78 @@
 
 
+.left
+  height: auto
+  display: flex
+  justify-content: center
+  margin-bottom: 16px
+  +LARGE
+    display: block
+    margin: 0
+  &_social
+    width: 40px
+    height: 40px
+    margin: 0 10px
+    +LARGE
+      width: 50px
+      height: 50px
+      display: block
+      margin: 10px auto
+
+.middle
+  padding: 0
+  +LARGE
+    padding: 0 16px
 .right
   &_container
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19)
+    height: auto
+    background: #fff
+    margin-bottom: 48px
+  &_head_img
+    width: 100%
+    height: auto
+  &_body
     padding: 16px
-    height: 2000px
-    
+    &_title
+      text-align: left
+      font-size: 34px
+      font-weight: 600
+
+  &_popular
+    &_container
+      box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19)
+      height: auto
+      background: #fff
+    &_item
+      height: 80px
+      border-bottom: 1px solid #ccc
+      padding-top: 15px
+      &:hover
+        background: #ccc
+        cursor: pointer
+      &_first
+        height: 70px
+        background: #F1F1F1
+        line-height: 70px
+        font-weight: 500
+        font-size: 20px
+        padding-left: 20px
+        cursor: pointer
+      &_content
+        height: 50px
+        width: 100%
+        +clearfix
+      &_title
+        float: left
+        &_f
+          font-weight: 600
+          font-size: 16px
+        &_s
+          font-weight: 400
+          font-size: 14px
+      &_img
+        width: 50px
+        height: 50px
+        float: left
+        margin: 0 10px
+        display: block

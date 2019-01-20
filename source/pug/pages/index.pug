@@ -15,8 +15,15 @@ html(lang='en')
 
       .main_container
         .articles
+          .article_header JAVA SCRIPT
           .row
-            .left.col.s12.l8
+            .left.col.s12.l1
+              img.left_social(src="assets/img/facebook.svg", alt="facebook")
+              img.left_social(src="assets/img/instagram.svg", alt="instagram")
+              img.left_social(src="assets/img/youtube.svg", alt="youtube")
+              img.left_social(src="assets/img/google_plus.svg", alt="google_plus")
+              img.left_social(src="assets/img/twitter.svg", alt="twitter")
+            .middle.col.s12.l7
               .row
                 .article_container.col.s12
                   .article_head
@@ -25,7 +32,15 @@ html(lang='en')
                     .article_body_title TITLE HEADING
                     .article_body_desc
                       | Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam itaque natus quas fugiat ducimus, obcaecati magnam porro soluta reprehenderit a!
-                    .btn Read More>>
+                    .response_section
+                      .btn.float_left Read More>>
+                      .comments
+                        .comments_left
+                          img.comments_like(src="assets/img/thumb-up.svg", alt="like")
+                          .comments_like_number 10
+                        .comments_right
+                          img.comments_dislike(src="assets/img/thumb-down.svg", alt="like")
+                          .comments_dislike_number 0
 
                 .article_container.col.s12
                   .article_head
@@ -34,7 +49,15 @@ html(lang='en')
                     .article_body_title TITLE HEADING
                     .article_body_desc
                       | Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam itaque natus quas fugiat ducimus, obcaecati magnam porro soluta reprehenderit a!
-                    .btn Read More>>
+                    .response_section
+                      .btn.float_left Read More>>
+                      .comments
+                        .comments_left
+                          img.comments_like(src="assets/img/thumb-up.svg", alt="like")
+                          .comments_like_number 10
+                        .comments_right
+                          img.comments_dislike(src="assets/img/thumb-down.svg", alt="like")
+                          .comments_dislike_number 0
 
                 .article_container.col.s12
                   .article_head
@@ -43,8 +66,71 @@ html(lang='en')
                     .article_body_title TITLE HEADING
                     .article_body_desc
                       | Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam itaque natus quas fugiat ducimus, obcaecati magnam porro soluta reprehenderit a!
-                    .btn Read More>>
+                    .response_section
+                      .btn.float_left Read More>>
+                      .comments
+                        .comments_left
+                          img.comments_like(src="assets/img/thumb-up.svg", alt="like")
+                          .comments_like_number 10
+                        .comments_right
+                          img.comments_dislike(src="assets/img/thumb-down.svg", alt="like")
+                          .comments_dislike_number 0
 
-            .right_container.col.s12.l4
-              .side_body
-                | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas.
+                .article_container.col.s12
+                  .article_head
+                    img.article_head_img(src="assets/img/woods.jpg", alt="snowflake")
+                  .article_body
+                    .article_body_title TITLE HEADING
+                    .article_body_desc
+                      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam itaque natus quas fugiat ducimus, obcaecati magnam porro soluta reprehenderit a!
+                    .response_section
+                      .btn.float_left Read More>>
+                      .comments
+                        .comments_left
+                          img.comments_like(src="assets/img/thumb-up.svg", alt="like")
+                          .comments_like_number 10
+                        .comments_right
+                          img.comments_dislike(src="assets/img/thumb-down.svg", alt="like")
+                          .comments_dislike_number 0
+
+            .right.col.s12.l4
+              .right_container
+                .right_head
+                  //- img.right_head_img(src="assets/img/profile1.jpg", alt="snowflake")
+                .right_body
+                  .right_body_title TITLE HEADING
+                  .right_body_desc
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam itaque natus quas fugiat ducimus, obcaecati magnam porro soluta reprehenderit a!
+                  .btn Read More>>
+              .right_popular
+                .right_popular_container
+                  .right_popular_item_first Popular Posts
+                  .right_popular_item
+                    .right_popular_item_content
+                      img.right_popular_item_img(src="assets/img/temp1.jpg", alt="snowflake")
+                      .right_popular_item_title
+                        .right_popular_item_title_f HOW?
+                        .right_popular_item_title_s Css buttons
+                  .right_popular_item
+                    .right_popular_item_content
+                      img.right_popular_item_img(src="assets/img/temp2.jpg", alt="snowflake")
+                      .right_popular_item_title
+                        .right_popular_item_title_f HOW?
+                        .right_popular_item_title_s Css animations
+                  .right_popular_item
+                    .right_popular_item_content
+                      img.right_popular_item_img(src="assets/img/temp3.jpg", alt="snowflake")
+                      .right_popular_item_title
+                        .right_popular_item_title_f HTML/CSS
+                        .right_popular_item_title_s flex box
+                  .right_popular_item
+                    .right_popular_item_content
+                      img.right_popular_item_img(src="assets/img/temp1.jpg", alt="snowflake")
+                      .right_popular_item_title
+                        .right_popular_item_title_f HTML/CSS
+                        .right_popular_item_title_s Perfect center
+      .footer
+        .f-rights
+          | Copyright ©2018 All rights reserved
+        .f-logo
+          | wda-soft.com
