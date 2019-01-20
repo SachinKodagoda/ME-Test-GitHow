@@ -1,21 +1,30 @@
 
 .header
-  // background: #5F5F5F
-  background: #2E2E30
-  color: #fff
-  height: 62px
-  width: 100vw
-  border-bottom: 2px solid #000
+  position: fixed
+  top: 0
+  left: 0
+  background: $header-back
+  color: $comment-font
+  height: 42px
+  width: 100%
+  border-bottom: 2px solid $header-border-bottom
   +clearfix
+  z-index: 1
+  +LARGE
+    height: 52px
+
 
   &_item
     display: inline-block
-    // float: right
-    height: 60px
-    line-height: 60px
+    height: 40px
+    line-height: 40px
     padding: 0 20px
     font-size: 20px
     cursor: pointer
+    +LARGE
+      display: inline-block
+      height: 50px
+      line-height: 50px
     &_container
       display: none
       +LARGE
@@ -23,18 +32,19 @@
 
 
   &_logo
-    height: 60px
-    line-height: 60px
+    height: 40px
+    line-height: 40px
     font-size: 30px
     padding: 0 40px
     text-align: center
     cursor: pointer
-    background: #000
-    // background: #2E2E30
-    color: #fff
+    background: $header-logo-back
+    color: $header-logo-font
     +LARGE
       float: left
+      height: 50px
+      line-height: 50px
 
 
 .item_disabled
-  color: #ccc
+  color: $header-item-disabled

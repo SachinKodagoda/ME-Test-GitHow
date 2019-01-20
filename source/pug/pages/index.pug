@@ -17,13 +17,14 @@ html(lang='en')
         .articles
           .article_header JAVA SCRIPT
           .row
-            .left.col.s12.l1
-              img.left_social(src="assets/img/facebook.svg", alt="facebook")
-              img.left_social(src="assets/img/instagram.svg", alt="instagram")
-              img.left_social(src="assets/img/youtube.svg", alt="youtube")
-              img.left_social(src="assets/img/google_plus.svg", alt="google_plus")
-              img.left_social(src="assets/img/twitter.svg", alt="twitter")
-            .middle.col.s12.l7
+            .social
+              img.social_icon(src="assets/img/facebook.svg", alt="facebook")
+              img.social_icon(src="assets/img/instagram.svg", alt="instagram")
+              img.social_icon(src="assets/img/youtube.svg", alt="youtube")
+              img.social_icon(src="assets/img/google_plus.svg", alt="google_plus")
+              img.social_icon(src="assets/img/twitter.svg", alt="twitter")
+            .left_area.col.s12.l1 pro
+            .middle_area.col.s12.l7
               .row
                 .article_container.col.s12
                   .article_head
@@ -93,44 +94,55 @@ html(lang='en')
                           img.comments_dislike(src="assets/img/thumb-down.svg", alt="like")
                           .comments_dislike_number 0
 
-            .right.col.s12.l4
-              .right_container
-                .right_head
-                  //- img.right_head_img(src="assets/img/profile1.jpg", alt="snowflake")
-                .right_body
-                  .right_body_title TITLE HEADING
-                  .right_body_desc
+            .right_area.col.s12.l4
+              .message_container
+                .message_head
+                  //- img.message_head_img(src="assets/img/profile1.jpg", alt="snowflake")
+                .message_body
+                  .message_body_title TITLE HEADING
+                  .message_body_desc
                     | Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam itaque natus quas fugiat ducimus, obcaecati magnam porro soluta reprehenderit a!
                   .btn Read More>>
-              .right_popular
-                .right_popular_container
-                  .right_popular_item_first Popular Posts
-                  .right_popular_item
-                    .right_popular_item_content
-                      img.right_popular_item_img(src="assets/img/temp1.jpg", alt="snowflake")
-                      .right_popular_item_title
-                        .right_popular_item_title_f HOW?
-                        .right_popular_item_title_s Css buttons
-                  .right_popular_item
-                    .right_popular_item_content
-                      img.right_popular_item_img(src="assets/img/temp2.jpg", alt="snowflake")
-                      .right_popular_item_title
-                        .right_popular_item_title_f HOW?
-                        .right_popular_item_title_s Css animations
-                  .right_popular_item
-                    .right_popular_item_content
-                      img.right_popular_item_img(src="assets/img/temp3.jpg", alt="snowflake")
-                      .right_popular_item_title
-                        .right_popular_item_title_f HTML/CSS
-                        .right_popular_item_title_s flex box
-                  .right_popular_item
-                    .right_popular_item_content
-                      img.right_popular_item_img(src="assets/img/temp1.jpg", alt="snowflake")
-                      .right_popular_item_title
-                        .right_popular_item_title_f HTML/CSS
-                        .right_popular_item_title_s Perfect center
+              .popular
+                .popular_container
+                  .popular_item_first Popular Posts
+                  .popular_item
+                    .popular_item_content
+                      img.popular_item_img(src="assets/img/temp1.jpg", alt="snowflake")
+                      .popular_item_title
+                        .popular_item_title_f HOW?
+                        .popular_item_title_s Css buttons
+                  .popular_item
+                    .popular_item_content
+                      img.popular_item_img(src="assets/img/temp2.jpg", alt="snowflake")
+                      .popular_item_title
+                        .popular_item_title_f HOW?
+                        .popular_item_title_s Css animations
+                  .popular_item
+                    .popular_item_content
+                      img.popular_item_img(src="assets/img/temp3.jpg", alt="snowflake")
+                      .popular_item_title
+                        .popular_item_title_f HTML/CSS
+                        .popular_item_title_s flex box
+                  .popular_item
+                    .popular_item_content
+                      img.popular_item_img(src="assets/img/temp1.jpg", alt="snowflake")
+                      .popular_item_title
+                        .popular_item_title_f HTML/CSS
+                        .popular_item_title_s Perfect center
+              .subscribe
+                .subscribe_container
+                  .subscribe_head
+                    //- img.message_head_img(src="assets/img/profile1.jpg", alt="snowflake")
+                  .subscribe_body
+                    .subscribe_body_title Subscribe Us
+                    .subscribe_body_desc
+                      form.subscribe-form
+                        .subscribe-form_group
+                          input.subscribe-form_group_input(type="text" placeholder="Your Email Address")
+                      .btn.subscribe_btn Subscribe
       .footer
-        .f-rights
-          | Copyright ©2018 All rights reserved
-        .f-logo
-          | wda-soft.com
+              .f-rights
+                | Copyright ©2018 All rights reserved
+              .f-logo
+                | wda-soft.com

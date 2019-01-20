@@ -1,0 +1,40 @@
+.popular
+  &_container
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19)
+    height: auto
+    background: $common-secondary-back
+    border: 1px solid $common-border
+    margin-bottom: 48px
+  &_item
+    height: 80px
+    border-bottom: 1px solid $popular-border-seperator
+    padding-top: 15px
+    &:hover
+      background: $popular-back-hover
+      cursor: pointer
+    &_first
+      height: 70px
+      background: $popular-back
+      line-height: 70px
+      font-weight: 500
+      font-size: 20px
+      padding-left: 20px
+      cursor: pointer
+    &_content
+      height: 50px
+      width: 100%
+      +clearfix
+    &_title
+      float: left
+      &_f
+        font-weight: 600
+        font-size: 16px
+      &_s
+        font-weight: 400
+        font-size: 14px
+    &_img
+      width: 50px
+      height: 50px
+      float: left
+      margin: 0 10px
+      display: block

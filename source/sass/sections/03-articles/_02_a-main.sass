@@ -1,12 +1,16 @@
 
+.middle_area
+  padding: 0
+  +LARGE
+    padding: 0 16px
 
 .article
   &_container
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19)
     height: auto
-    background: #fff
+    background: $common-secondary-back
     margin-bottom: 48px
-    border: 1px solid #2E2E30
+    border: 1px solid $common-border
   &_head_img
     width: 100%
     height: auto
@@ -42,8 +46,8 @@
       display: inline-block
       position: relative
       top: -5px
-      background: #000
-      color: #fff
+      background: $comment-back
+      color: $comment-font
       border-radius: 100%
       width: 30px
       height: 30px
@@ -56,8 +60,8 @@
       display: inline-block
       position: relative
       top: -12px
-      background: #000
-      color: #fff
+      background: $comment-back
+      color: $comment-font
       border-radius: 100%
       width: 30px
       height: 30px

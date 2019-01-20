@@ -12,12 +12,14 @@
   white-space: nowrap
   background-color: white
   border-radius: 3px
-  border: 1px solid #ccc
+  border: 1px solid $common-btn-border
   padding: 12px 24px
   cursor: pointer
   box-sizing: border-box
   transition: all 0.2s ease
   box-shadow: 0 20px 12px -15px rgba(0, 0, 0, 0.2)
+  +noSelect
+  +tap_highlight_issue
 
   &:hover,
   &:active,
@@ -36,7 +38,7 @@
   height: 100%
   +XXXLARGE
     margin: 0 auto
-    border: 1px solid #ccc
+    border: 1px solid $common-border
 .main_container
   padding: 16px
 
