@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+  head
+    include ../globals/head.pug
+  body
+    .main_wrapper_topic
+      .main_container_topic
+        .topic_header 
+          | HOW TO USE GIT COMMANDS
+          img.icon_git(src="assets/img/icon_git.svg", alt="Git_icon")
+        .topic_body
+          .topic_what
+            | Git is a
+            span.word_link  free
+            |  and
+            span.word_link  open source distributed version control system
+            |  designed to handle everything from small to very large projects with speed and efficiency.
+          .topic_code_title git config
+          .topic_code_desc 
+            | Configure the author name and email address to be used with your commits.
+          .topic_code
+            | git config –-global user.name “[name]”
+            br
+            | git config –-global user.email “[email address]”
+            br
+            br
+            | eg:
+            br
+            git config –-global user.name “sachin”
+            br
+            git config --global user.email "sachin@gmail.com"
+            
