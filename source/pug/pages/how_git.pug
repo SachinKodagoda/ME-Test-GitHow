@@ -6,27 +6,542 @@ html(lang='en')
     .main_wrapper_topic
       .main_container_topic
         .topic_header 
-          | HOW TO USE GIT COMMANDS
+          span HOW TO USE GIT COMMANDS
           img.icon_git(src="assets/img/icon_git.svg", alt="Git_icon")
         .topic_body
           .topic_what
-            | Git is a
+            span Git is a
             span.word_link  free
-            |  and
+            span  and
             span.word_link  open source distributed version control system
-            |  designed to handle everything from small to very large projects with speed and efficiency.
+            span  designed to handle everything from small to very large projects with speed and efficiency.
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title Git Repository Layout
+          img.topic_img(src="assets/img/git_des.jpg", alt="Git_des")
+          .topic_what_sub
+            br
+            .circle
+            span.bold Workspace ( or working tree )
+            span  is the directory of source files that you see and edit.
+            br
+            br
+
+            .circle
+            span.bold Staging area ( or index )
+            span  is a single, large, binary file
+            span  which lists all files in the current branch, their sha1 checksums, time stamps and the file names.
+            br
+            span ( it is not another directory with a copy of files in it )
+            br
+            span.highlight Path: [base_of_repo]/.git/index
+            br
+            br
+
+            .circle
+            span.bold The local repository
+            span  is a hidden directory including
+            span  an 'objects' directory which contains all versions of files
+            span  in the repo
+            br
+            span  ( local branches and copies of remote branches )
+            span as a compressed "blob" file.
+            br
+            span.highlight Path: [baseOfRepo]/.git
+            br
+            br
+
+            a.link(href="https://git-scm.com/docs/gitrepository-layout") For More details
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
           .topic_code_title git config
-          .topic_code_desc 
-            | Configure the author name and email address to be used with your commits.
+          .topic_code_desc
+            .circle
+            span To configure the author name to be used with your commits.
           .topic_code
-            | git config –-global user.name “[name]”
+            .topic_code_base
+              span.topic_code_ex-margin git config –-global user.name “
+              span.highlight [name]
+              span ”
+            .topic_code_remark
+              .eg Eg:
+              span git config –-global user.name “sachin”
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span To configure the email address to be used with your commits.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git config –-global user.email “
+              span.highlight [email]
+              span ”
+            .topic_code_remark
+              .eg Eg:
+              span git config --global user.email "sachin@gmail.com"
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git init
+          .topic_code_desc
+            .circle
+            span To create a new empty local repository or reinitialize an existing one.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git init
+              span.highlight  [repository name]
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git remote
+          .topic_code_desc
+            .circle
+            span To connect your local repository to the remote server.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git remote add
+              span.highlight  [variable]
+              span.highlight  [url]
+            .topic_code_remark
+              .eg Eg:
+              | git remote add origin https://github.com/SachinKodagoda/tutorials.git
+          .topic_code_desc
+            .circle
+            span To list all currently configured remote repositories.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git remote -v
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git clone
+          .topic_code_desc
+            .circle
+            span To obtain a repository from an remote url (https).
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git clone
+              span.highlight  [https url]
+            .topic_code_remark
+              .eg Eg:
+              span git clone https://github.com/SachinKodagoda/php_api
+              div.or or
+              span git clone https://github.com/SachinKodagoda/php_api.git
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span To obtain a repository from an remote url (ssh).
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git clone
+              span.highlight  [ssh url]
+            .topic_code_remark
+              .eg Eg:
+              span git clone git@github.com:SachinKodagoda/php_api
+              div.or or
+              span git clone git@github.com:SachinKodagoda/php_api.git
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span To create a copy of a local repository.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git clone
+              span.highlight  [/path/to/repository]
+            .topic_code_remark
+              .eg Eg:
+              span git clone C:/Git/test/php_api
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git add
+          .topic_code_desc
+            .circle
+            span To add a file to the staging area(index).
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git add
+              span.highlight  [file]
+            .topic_code_remark
+              .eg Eg:
+              span git add style.css
+
+
+          .topic_code_desc
+            .circle
+            span To add all files to the staging area.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git add .
+              span.topic_code_ex-margin.or or
+              span.topic_code_ex-margin git add *
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git commit
+          .topic_code_desc
+            .circle
+            span To add changes to local repository.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git commit -m “
+              span.highlight [message]
+              span ”
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span To add and commit changes to local repository.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git commit -a
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git status
+          .topic_code_desc
+            .circle
+            span To list all the files that have to be committed or added.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git status
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git reset
+          .topic_code_desc
+            .circle
+            span Unstages all the files, but it preserves the file contents.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git reset
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span Unstages a file, but it preserves the file contents.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git reset
+              span.highlight  [file]
+            .topic_code_remark
+              .eg Eg:
+              span git reset style.css
+          .or.topic_code_ex-margin or
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git reset HEAD
+              span.highlight  [file]
+            .topic_code_remark
+              .eg Eg:
+              span git reset HEAD style.css
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span Undo all the commits after the specified commit and preserves the changes locally.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git reset
+              span.highlight  [commitID]
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git rm
+          .topic_code_desc
+            .circle
+            span delete a file from your working directory and stages the deletion.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git rm
+              span.highlight  [file]
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git push
+          .topic_code_desc
+            .circle
+            span To send the committed changes to master branch of your remote repository.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git push
+              span.highlight  [variable]
+              span  master
+            .topic_code_remark
+              .eg Eg:
+              span git push origin master
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span To send the branch commits to your remote repository. ( If the specific branch is not available in the remote repo, then a branch will be created )
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git push
+              span.highlight  [variable]
+              span.highlight  [branch]
+            .topic_code_remark
+              .eg Eg:
+              span git push origin branch_1
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span To push all branches to your remote repository. ( all the commits also will be added )
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git push --all
+              span.highlight  [variable]
+            .topic_code_remark
+              .eg Eg:
+              span git push --all origin
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span To delete a branch on your remote repository.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git push
+              span.highlight  [variable]
+              span  :
+              span.highlight [branch]
+            .topic_code_remark
+              .eg Eg:
+              span git push origin :branch_1
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span To push the current branch and set the remote as upstream branch.
+          .topic_code
+            .topic_code_base
+              span git push --set-upstream
+              span.highlight  [variable]
+              span.highlight  [branch]
+            .topic_code_remark
+              .eg Eg:
+              span git push --set-upstream origin branch_1
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git pull
+          .topic_code_desc
+            .circle
+            span To fetch and merge changes on the remote server to your working directory.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git pull
+              span.highlight  [url]
+            .topic_code_remark
+              .eg Eg:
+              span git pull https://github.com/SachinKodagoda/tutorials.git
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git branch
+          .topic_code_desc
+            .circle
+            span To list all the local branches in the current repository. and check what branch you're currently in.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git branch
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span To create a new branch.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git branch
+              span.highlight  [branch name]
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span To delet a branch.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git branch -d
+              span.highlight  [branch name]
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git checkout
+          .topic_code_desc
+            .circle
+            span To switch from one branch to another.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git checkout
+              span.highlight  [branch]
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span To create a new branch and switch.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git checkout -b
+              span.highlight  [branch]
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git merge
+          .topic_code_desc
+            .circle
+            span To merge specified branch’s history into the current branch.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git merge
+              span.highlight  [branch]
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git diff
+          .topic_code_desc
+            .circle
+            span Shows the file differences which are not yet staged.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git diff
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span Shows the file differences between in the staging area and the latest version present.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git diff --staged
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span Shows the file differences between the two branches.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git diff
+              span.highlight  [first branch]
+              span.highlight  [second branch]
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git log
+          .topic_code_desc
+            .circle
+            span list the version history for the current branch.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git log
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span list version history for a file, including the renaming of files also.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git log --follow
+              span.highlight  [file]
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git show
+          .topic_code_desc
+            .circle
+            span the metadata and content changes of the specified commit.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git show
+              span.highlight  [commitID]
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git tag
+          .topic_code_desc
+            .circle
+            span This command is used to give tags to the specified commit.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git tag
+              span.highlight  [commitID]
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git stash
+          .topic_code_desc
+            .circle
+            span To stores all the modified tracked files temporarily.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git stash save
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span To restore the most recently stashed files.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git stash pop
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span To list all stashed changesets.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git stash list
+          //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span discards the most recently stashed changeset.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git stash drop
+
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title git help
+          .topic_code_desc
+            .circle
+            span To check the help list.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git help
+          //-----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title Create new repository on the command line
+          .topic_code_desc
+            .circle
+            | cd to a specific directory, then use following command lines
+          .topic_code
+            | echo "# TEST" >> README.md
             br
-            | git config –-global user.email “[email address]”
+            | git init
             br
+            | git add README.md
             br
-            | eg:
+            | git commit -m "first commit"
             br
-            git config –-global user.name “sachin”
+            | git remote add origin https://github.com/SachinKodagoda/tutorials.git
             br
-            git config --global user.email "sachin@gmail.com"
-            
+            | git push -u origin master
+          //-----------------------------------------------
+          .hr
+          //-----------------------------------------------
+          .topic_code_title Push an existing repository on the command line
+          .topic_code_desc 
+          .topic_code
+            | git remote add origin https://github.com/SachinKodagoda/tutorials.git
+            br
+            | git push -u origin master

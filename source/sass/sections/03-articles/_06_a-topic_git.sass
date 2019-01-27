@@ -3,10 +3,19 @@
         text-align: center
         font-size: 32px
     &_body
-        max-width: 500px
+        max-width: 600px
         margin: 0 auto
+        // border: 1px dotted #000
+        // padding: 0 10px
     &_what
         font-size: 18px
+        margin: auto
+    &_what_sub
+        font-size: 15px
+    &_img
+        max-width: 100%
+        height: auto
+        display: block
         margin: auto
     &_code
         box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2)
@@ -16,12 +25,26 @@
         word-wrap: break-word
         margin: 10px 0
         &_title
-            font-weight: 600
+            font-weight: 900
             font-size: 20px
             margin: 10px 0
-
-
-
+            color: #173F5F
+            // padding-left: 10px
+        &_desc
+            font-weight: 600
+            color: #173F5F
+        &_base
+            paddin-left: 10px
+        &_ex-margin
+            margin-left: 10px
+        &_remark
+            color: #000
+            background: rgba(230, 230, 230,0.1)
+            padding: 10px
+            border: 1px solid rgba(0,0,0,.2)
+            margin-top: 10px
+            margin-bottom: 20px
+            +break_words
 
 .icon
     &_git
@@ -31,3 +54,27 @@
 
 .word_link
     color: $link
+
+.highlight
+    color: $highlight
+
+.hr
+    border-bottom: 1px dotted #000000
+    margin-top: 20px
+.circle
+    border-radius: 100%
+    background: #20639B
+    width: 10px
+    height: 10px
+    margin-right: 5px
+    display: inline-block
+.eg
+    font-weight: 600
+.or
+    font-weight: 600
+.bold
+    font-weight: 600
+
+.link
+    color: #20639B
+    text-decoration: underline

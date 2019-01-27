@@ -10,7 +10,7 @@
     <meta name="theme-color" content="black">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon" sizes="16x16">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,600,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
@@ -19,17 +19,363 @@
   <body>
     <div class="main_wrapper_topic">
       <div class="main_container_topic">
-        <div class="topic_header">
-           HOW TO USE GIT COMMANDS<img class="icon_git" src="assets/img/icon_git.svg" alt="Git_icon"></div>
+        <div class="topic_header"> <span>HOW TO USE GIT COMMANDS</span><img class="icon_git" src="assets/img/icon_git.svg" alt="Git_icon"></div>
         <div class="topic_body">
-          <div class="topic_what">Git is a<span class="word_link"> free</span> and<span class="word_link"> open source distributed version control system</span> designed to handle everything from small to very large projects with speed and efficiency.</div>
+          <div class="topic_what"><span>Git is a</span><span class="word_link"> free</span><span> and</span><span class="word_link"> open source distributed version control system</span><span> designed to handle everything from small to very large projects with speed and efficiency.</span></div>
+          <div class="hr"></div>
+          <div class="topic_code_title">Git Repository Layout</div><img class="topic_img" src="assets/img/git_des.jpg" alt="Git_des">
+          <div class="topic_what_sub"><br>
+            <div class="circle"></div><span class="bold">Workspace ( or working tree )</span><span> is the directory of source files that you see and edit.</span><br><br>
+            <div class="circle"></div><span class="bold">Staging area ( or index )</span><span> is a single, large, binary file</span><span> which lists all files in the current branch, their sha1 checksums, time stamps and the file names.</span><br><span>( it is not another directory with a copy of files in it )</span><br><span class="highlight">Path: [base_of_repo]/.git/index</span><br><br>
+            <div class="circle"></div><span class="bold">The local repository</span><span> is a hidden directory including</span><span> an 'objects' directory which contains all versions of files</span><span> in the repo</span><br><span> ( local branches and copies of remote branches )</span><span>as a compressed "blob" file.</span><br><span class="highlight">Path: [baseOfRepo]/.git</span><br><br><a class="link" href="https://git-scm.com/docs/gitrepository-layout">For More details</a>
+          </div>
+          <div class="hr"></div>
           <div class="topic_code_title">git config</div>
           <div class="topic_code_desc">
-             Configure the author name and email address to be used with your commits.</div>
-          <div class="topic_code">git config –-global user.name “[name]”<br>git config –-global user.email “[email address]”<br><br>eg:<br>
-            <git>config –-global user.name “sachin”</git><br>
-            <git>config --global user.email "sachin@gmail.com"</git>
+            <div class="circle"></div><span>To configure the author name to be used with your commits.</span>
           </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git config –-global user.name “</span><span class="highlight">[name]</span><span>”</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git config –-global user.name “sachin”</span>
+            </div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To configure the email address to be used with your commits.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git config –-global user.email “</span><span class="highlight">[email]</span><span>”</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git config --global user.email "sachin@gmail.com"</span>
+            </div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git init</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To create a new empty local repository or reinitialize an existing one.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git init</span><span class="highlight"> [repository name]</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git remote</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To connect your local repository to the remote server.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git remote add</span><span class="highlight"> [variable]</span><span class="highlight"> [url]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div>git remote add origin https://github.com/SachinKodagoda/tutorials.git
+            </div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To list all currently configured remote repositories.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git remote -v</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git clone</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To obtain a repository from an remote url (https).</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git clone</span><span class="highlight"> [https url]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git clone https://github.com/SachinKodagoda/php_api</span>
+              <div class="or">or</div><span>git clone https://github.com/SachinKodagoda/php_api.git</span>
+            </div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To obtain a repository from an remote url (ssh).</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git clone</span><span class="highlight"> [ssh url]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git clone git@github.com:SachinKodagoda/php_api</span>
+              <div class="or">or</div><span>git clone git@github.com:SachinKodagoda/php_api.git</span>
+            </div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To create a copy of a local repository.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git clone</span><span class="highlight"> [/path/to/repository]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git clone C:/Git/test/php_api</span>
+            </div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git add</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To add a file to the staging area(index).</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git add</span><span class="highlight"> [file]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git add style.css</span>
+            </div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To add all files to the staging area.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git add .</span><span class="topic_code_ex-margin or">or</span><span class="topic_code_ex-margin">git add *</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git commit</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To add changes to local repository.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git commit -m “</span><span class="highlight">[message]</span><span>”</span></div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To add and commit changes to local repository.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git commit -a</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git status</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To list all the files that have to be committed or added.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git status</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git reset</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>Unstages all the files, but it preserves the file contents.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git reset</span></div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>Unstages a file, but it preserves the file contents.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git reset</span><span class="highlight"> [file]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git reset style.css</span>
+            </div>
+          </div>
+          <div class="or topic_code_ex-margin">or</div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git reset HEAD</span><span class="highlight"> [file]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git reset HEAD style.css</span>
+            </div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>Undo all the commits after the specified commit and preserves the changes locally.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git reset</span><span class="highlight"> [commitID]</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git rm</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>delete a file from your working directory and stages the deletion.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git rm</span><span class="highlight"> [file]</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git push</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To send the committed changes to master branch of your remote repository.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git push</span><span class="highlight"> [variable]</span><span> master</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git push origin master</span>
+            </div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To send the branch commits to your remote repository. ( If the specific branch is not available in the remote repo, then a branch will be created )</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git push</span><span class="highlight"> [variable]</span><span class="highlight"> [branch]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git push origin branch_1</span>
+            </div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To push all branches to your remote repository. ( all the commits also will be added )</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git push --all</span><span class="highlight"> [variable]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git push --all origin</span>
+            </div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To delete a branch on your remote repository.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git push</span><span class="highlight"> [variable]</span><span> :</span><span class="highlight">[branch]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git push origin :branch_1</span>
+            </div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To push the current branch and set the remote as upstream branch.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span>git push --set-upstream</span><span class="highlight"> [variable]</span><span class="highlight"> [branch]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git push --set-upstream origin branch_1</span>
+            </div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git pull</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To fetch and merge changes on the remote server to your working directory.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git pull</span><span class="highlight"> [url]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git pull https://github.com/SachinKodagoda/tutorials.git</span>
+            </div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git branch</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To list all the local branches in the current repository. and check what branch you're currently in.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git branch</span></div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To create a new branch.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git branch</span><span class="highlight"> [branch name]</span></div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To delet a branch.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git branch -d</span><span class="highlight"> [branch name]</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git checkout</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To switch from one branch to another.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git checkout</span><span class="highlight"> [branch]</span></div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To create a new branch and switch.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git checkout -b</span><span class="highlight"> [branch]</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git merge</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To merge specified branch’s history into the current branch.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git merge</span><span class="highlight"> [branch]</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git diff</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>Shows the file differences which are not yet staged.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git diff</span></div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>Shows the file differences between in the staging area and the latest version present.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git diff --staged</span></div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>Shows the file differences between the two branches.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git diff</span><span class="highlight"> [first branch]</span><span class="highlight"> [second branch]</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git log</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>list the version history for the current branch.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git log</span></div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>list version history for a file, including the renaming of files also.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git log --follow</span><span class="highlight"> [file]</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git show</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>the metadata and content changes of the specified commit.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git show</span><span class="highlight"> [commitID]</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git tag</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>This command is used to give tags to the specified commit.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git tag</span><span class="highlight"> [commitID]</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git stash</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To stores all the modified tracked files temporarily.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git stash save</span></div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To restore the most recently stashed files.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git stash pop</span></div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To list all stashed changesets.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git stash list</span></div>
+          </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>discards the most recently stashed changeset.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git stash drop</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">git help</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To check the help list.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git help</span></div>
+          </div>
+          <div class="hr"></div>
+          <div class="topic_code_title">Create new repository on the command line</div>
+          <div class="topic_code_desc">
+            <div class="circle"></div>cd to a specific directory, then use following command lines
+          </div>
+          <div class="topic_code">echo "# TEST" >> README.md<br>git init<br>git add README.md<br>git commit -m "first commit"<br>git remote add origin https://github.com/SachinKodagoda/tutorials.git<br>git push -u origin master</div>
+          <div class="hr"></div>
+          <div class="topic_code_title">Push an existing repository on the command line</div>
+          <div class="topic_code_desc"> </div>
+          <div class="topic_code">git remote add origin https://github.com/SachinKodagoda/tutorials.git<br>git push -u origin master</div>
         </div>
       </div>
     </div>
