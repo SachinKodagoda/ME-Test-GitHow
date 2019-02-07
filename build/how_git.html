@@ -19,7 +19,10 @@
   <body>
     <div class="main_wrapper_topic">
       <div class="main_container_topic">
-        <div class="topic_header"> <span>HOW TO USE GIT COMMANDS</span><img class="icon_git" src="assets/img/icon_git.svg" alt="Git_icon"></div>
+        <div class="topic_header"><img class="icon_git" src="assets/img/icon_git.svg" alt="Git_icon">
+          <div class="topic_pt_1"> <span>HOW TO USE</span></div>
+          <div class="topic_pt_2">BASIC GIT COMMANDS</div>
+        </div>
         <div class="topic_body">
           <div class="topic_what"><span>Git is a</span><span class="word_link"> free</span><span> and</span><span class="word_link"> open source distributed version control system</span><span> designed to handle everything from small to very large projects with speed and efficiency.</span></div>
           <div class="hr"></div>
@@ -274,10 +277,19 @@
           <div class="topic_code">
             <div class="topic_code_base"><span class="topic_code_ex-margin">git checkout -b</span><span class="highlight"> [branch]</span></div>
           </div>
+          <div class="topic_code_desc">
+            <div class="circle"></div><span>To discard changes in working directory.</span>
+          </div>
+          <div class="topic_code">
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git checkout --</span><span class="highlight"> [file]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git checkout -- style.css</span>
+            </div>
+          </div>
           <div class="hr"></div>
           <div class="topic_code_title">git merge</div>
           <div class="topic_code_desc">
-            <div class="circle"></div><span>To merge specified branch’s history into the current branch.</span>
+            <div class="circle"></div><span>To merge a different branch into your active branch.</span>
           </div>
           <div class="topic_code">
             <div class="topic_code_base"><span class="topic_code_ex-margin">git merge</span><span class="highlight"> [branch]</span></div>
@@ -314,7 +326,10 @@
             <div class="circle"></div><span>list version history for a file, including the renaming of files also.</span>
           </div>
           <div class="topic_code">
-            <div class="topic_code_base"><span class="topic_code_ex-margin">git log --follow</span><span class="highlight"> [file]</span></div>
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git log --follow -- </span><span class="highlight"> [file]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git log --follow -- style.css</span>
+            </div>
           </div>
           <div class="hr"></div>
           <div class="topic_code_title">git show</div>
@@ -323,6 +338,9 @@
           </div>
           <div class="topic_code">
             <div class="topic_code_base"><span class="topic_code_ex-margin">git show</span><span class="highlight"> [commitID]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git show 3a0567dcd623b9f368424dc3aad86106faba31da</span>
+            </div>
           </div>
           <div class="hr"></div>
           <div class="topic_code_title">git tag</div>
@@ -330,33 +348,10 @@
             <div class="circle"></div><span>This command is used to give tags to the specified commit.</span>
           </div>
           <div class="topic_code">
-            <div class="topic_code_base"><span class="topic_code_ex-margin">git tag</span><span class="highlight"> [commitID]</span></div>
-          </div>
-          <div class="hr"></div>
-          <div class="topic_code_title">git stash</div>
-          <div class="topic_code_desc">
-            <div class="circle"></div><span>To stores all the modified tracked files temporarily.</span>
-          </div>
-          <div class="topic_code">
-            <div class="topic_code_base"><span class="topic_code_ex-margin">git stash save</span></div>
-          </div>
-          <div class="topic_code_desc">
-            <div class="circle"></div><span>To restore the most recently stashed files.</span>
-          </div>
-          <div class="topic_code">
-            <div class="topic_code_base"><span class="topic_code_ex-margin">git stash pop</span></div>
-          </div>
-          <div class="topic_code_desc">
-            <div class="circle"></div><span>To list all stashed changesets.</span>
-          </div>
-          <div class="topic_code">
-            <div class="topic_code_base"><span class="topic_code_ex-margin">git stash list</span></div>
-          </div>
-          <div class="topic_code_desc">
-            <div class="circle"></div><span>discards the most recently stashed changeset.</span>
-          </div>
-          <div class="topic_code">
-            <div class="topic_code_base"><span class="topic_code_ex-margin">git stash drop</span></div>
+            <div class="topic_code_base"><span class="topic_code_ex-margin">git tag</span><span class="highlight"> [tag]</span><span class="highlight"> [commitID]</span></div>
+            <div class="topic_code_remark">
+              <div class="eg">Eg:</div><span>git tag 1.0.0 3a0567dcd623b9f368424dc3aad86106faba31da</span>
+            </div>
           </div>
           <div class="hr"></div>
           <div class="topic_code_title">git help</div>

@@ -5,9 +5,13 @@ html(lang='en')
   body
     .main_wrapper_topic
       .main_container_topic
-        .topic_header 
-          span HOW TO USE GIT COMMANDS
+        .topic_header
           img.icon_git(src="assets/img/icon_git.svg", alt="Git_icon")
+          .topic_pt_1 
+            span HOW TO USE
+          .topic_pt_2 BASIC GIT COMMANDS
+          
+          
         .topic_body
           .topic_what
             span Git is a
@@ -376,12 +380,24 @@ html(lang='en')
               span.topic_code_ex-margin git checkout -b
               span.highlight  [branch]
           //-----------------------------------------------
+          .topic_code_desc
+            .circle
+            span To discard changes in working directory.
+          .topic_code
+            .topic_code_base
+              span.topic_code_ex-margin git checkout --
+              span.highlight  [file]
+            .topic_code_remark
+              .eg Eg:
+              span git checkout -- style.css
+
+          //-----------------------------------------------
           .hr
           //-----------------------------------------------
           .topic_code_title git merge
           .topic_code_desc
             .circle
-            span To merge specified branch’s history into the current branch.
+            span To merge a different branch into your active branch.
           .topic_code
             .topic_code_base
               span.topic_code_ex-margin git merge
@@ -428,8 +444,11 @@ html(lang='en')
             span list version history for a file, including the renaming of files also.
           .topic_code
             .topic_code_base
-              span.topic_code_ex-margin git log --follow
+              span.topic_code_ex-margin git log --follow -- 
               span.highlight  [file]
+            .topic_code_remark
+              .eg Eg:
+              span git log --follow -- style.css
           //-----------------------------------------------
           .hr
           //-----------------------------------------------
@@ -441,6 +460,9 @@ html(lang='en')
             .topic_code_base
               span.topic_code_ex-margin git show
               span.highlight  [commitID]
+            .topic_code_remark
+              .eg Eg:
+              span git show 3a0567dcd623b9f368424dc3aad86106faba31da
           //-----------------------------------------------
           .hr
           //-----------------------------------------------
@@ -451,39 +473,11 @@ html(lang='en')
           .topic_code
             .topic_code_base
               span.topic_code_ex-margin git tag
+              span.highlight  [tag]
               span.highlight  [commitID]
-          //-----------------------------------------------
-          .hr
-          //-----------------------------------------------
-          .topic_code_title git stash
-          .topic_code_desc
-            .circle
-            span To stores all the modified tracked files temporarily.
-          .topic_code
-            .topic_code_base
-              span.topic_code_ex-margin git stash save
-          //-----------------------------------------------
-          .topic_code_desc
-            .circle
-            span To restore the most recently stashed files.
-          .topic_code
-            .topic_code_base
-              span.topic_code_ex-margin git stash pop
-          //-----------------------------------------------
-          .topic_code_desc
-            .circle
-            span To list all stashed changesets.
-          .topic_code
-            .topic_code_base
-              span.topic_code_ex-margin git stash list
-          //-----------------------------------------------
-          .topic_code_desc
-            .circle
-            span discards the most recently stashed changeset.
-          .topic_code
-            .topic_code_base
-              span.topic_code_ex-margin git stash drop
-
+            .topic_code_remark
+              .eg Eg:
+              span git tag 1.0.0 3a0567dcd623b9f368424dc3aad86106faba31da
           //-----------------------------------------------
           .hr
           //-----------------------------------------------
