@@ -3,16 +3,18 @@
 // BUTTON TEMPLETE-------------------------------------------------
 .btn
   display: inline-block
-  color: black
+  // color: black
   text-align: center
   font-size: 14px
   font-weight: 600
   text-transform: uppercase
   text-decoration: none
   white-space: nowrap
-  background-color: white
+  // background-color: white
+  background-color: $common-button-back
+  color: $common-button-color
   border-radius: 3px
-  border: 1px solid $common-btn-border
+  border: 1px solid $common-button-border
   padding: 12px 24px
   cursor: pointer
   box-sizing: border-box
@@ -26,7 +28,7 @@
   &:focus
     outline: 0
     transform: translateY(3px)
-    color: black
+    // color: black
     box-shadow: none
 
 .main_wrapper
@@ -37,8 +39,8 @@
   padding: 0
   height: 100%
   +XXXLARGE
-    margin: 0 auto
-    border: 1px solid $common-border
+    // margin: 0 auto
+    // border: 1px solid $common-border
 .main_container
   padding: 16px
 
@@ -50,8 +52,8 @@
   padding: 0
   height: 100%
   +XXXLARGE
-    margin: 0 auto
-    border: 1px solid $common-border
+    // margin: 0 auto
+    // border: 1px solid $common-border
 .main_container_topic
   padding: 16px
 

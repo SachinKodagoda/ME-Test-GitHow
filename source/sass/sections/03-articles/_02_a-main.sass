@@ -11,18 +11,34 @@
     background: $common-secondary-back
     margin-bottom: 48px
     border: 1px solid $common-border
+    border-radius: 11px 11px 0 11px
   &_head_img
     width: 100%
     height: auto
+    margin: 0
   &_body
-    padding: 16px
+    &_padding
+      padding: 0 16px 16px 16px
     &_title
-      text-align: left
+      position: relative
+      height: $band-height
+      line-height: $band-height
       font-size: 32px
       font-weight: 600
+      margin-top: 16px
+      border-top: 1px solid $band-back-border
+      border-bottom: 1px solid $band-back-border
+      text-align: center
+      color: $band-color
+      background-color: $band-back
+      text-shadow: 0px -1px 0px rgba(0,0,0,.5)
+      // padding: 5px 0
+      // font-size: 32px
+      // line-height: 35px
     &_desc
       margin: 20px 0
       font-size: 20px
+      color: $article-body-desc-color
   &_header
     height: 60px
     line-height: 60px
@@ -70,3 +86,80 @@
       height: 30px
       text-align: center
       line-height: 30px
+
+
+.fancy
+  &_cover
+    width: 100%
+    height: 50px
+    overflow: hidden
+    position: relative
+    border-radius: 10px 10px 0 0
+  &_right
+    width: 100%
+    height: 50px
+    background: $fancy-right-back
+    position: absolute
+    left: 50%
+    top: 0
+    transform: skew(45deg)
+    border-radius: 0 0 0 10px
+    // +MEDIUM
+    //   left: 60%
+  &_topic
+    width: 50%
+    text-align: center
+    line-height: 50px
+    color: $fancy-topic-color
+    font-weight: 900
+    font-size: 32px
+    // +MEDIUM
+    //   width: 60%
+
+.outer_part_left
+  position: absolute
+  width: 8px
+  height: $band-height
+  background: $band-back
+  border-top: 1px solid $band-back-border
+  border-left: 1px solid $band-back-border
+  border-bottom: 1px solid $band-back-border
+  left: -8px
+  top: $band-top
+  box-shadow: -2px 0 2px 0 rgba(0,0,0,0.15)
+  &::after
+    content: ""
+    position: absolute
+    top: $band-triangle-from-top
+    left: -1px
+    width: 0
+    height: 0
+    border-top: 8px solid $band-back-triangle
+    border-left: 8px solid transparent
+
+.outer_part_right
+  position: absolute
+  width: 8px
+  height: $band-height
+  background: $band-back
+  border-top: 1px solid $band-back-border
+  border-right: 1px solid $band-back-border
+  border-bottom: 1px solid $band-back-border
+  right: -8px
+  top: $band-top
+  box-shadow: 2px 0 2px 0 rgba(0,0,0,0.15)
+  &::after
+    content: ""
+    position: absolute
+    top: $band-triangle-from-top
+    right: -1px
+    width: 0
+    height: 0
+    border-top: 8px solid $band-back-triangle
+    border-right: 8px solid transparent
+
+.outer_part_title
+  height: 100%
+  // background: red
+  // border-top: 1px dashed #fff
+  // border-bottom: 1px dashed #fff
