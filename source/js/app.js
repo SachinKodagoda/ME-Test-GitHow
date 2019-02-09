@@ -1,42 +1,15 @@
-var navButton = document.getElementById("nav_toggle");
-var left_menu = document.getElementById("left_menu");
-var ham = document.getElementsByClassName("ham");
-
-function toggle_nav(event) {
-    var i;
-    for (i = 0; i < ham.length; i++) {
-        ham[i].classList.toggle("cross");
-    }
-    // left_menu.classList.toggle("came_in");
-}
-
-// navButton.addEventListener("click", toggle_nav);
-
-// left_menu.addEventListener("click", toggle_nav);
-
-
 $(function(){
 
-    function animate_width(){
-        $(".booking-logo").addClass("animate_width");
-    }
-
-    function animate_rotation(){
-        $(".booking-logo").addClass("animate_rotation");
-    }
-
-    function animate_border(){
-        $(".booking-logo").addClass("animate_border");
-    }
-
-
-
-    // document.getElementById("mp4_src").src = "assets/video/hotel.mp4";
-    // document.getElementById("f-video").load();
-
-    $(window).bind("load", function() {
-        setTimeout(animate_rotation, 1000 );
-        setTimeout(animate_width, 2000 );
-        setTimeout(animate_border, 3500 );
-    });
+    $( "#chat_icon" ).click(function() {
+        // $(".chat_sub1").animate({right: '80px', bottom: '10px'});
+        // $(".chat_sub2").animate({right: '60px', bottom: '60px'});
+        // $(".chat_sub3").animate({right: '10px', bottom: '80px'});
+        $(".chat_sub1").toggleClass('animate_sub1');
+        $(".chat_sub2").toggleClass('animate_sub2');
+        $(".chat_sub3").toggleClass('animate_sub3');
+        $("#chat_icon").toggleClass('animate_chat');
+        $('.chat_img').toggleClass('animate_chat_image_before');
+        $('.half_circle').toggleClass('animate_half_circle');
+        
+      });
 });

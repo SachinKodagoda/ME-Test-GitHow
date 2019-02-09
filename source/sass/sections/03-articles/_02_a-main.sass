@@ -163,3 +163,125 @@
   // background: red
   // border-top: 1px dashed #fff
   // border-bottom: 1px dashed #fff
+
+.chat
+  width: 60px
+  height: 60px
+  position: fixed
+  background: $chat-button
+  right: 5px
+  bottom: 5px
+  border-radius: 100%
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.9)
+  border: 4px solid #fff
+  cursor: pointer
+  transition: all .2s ease
+  z-index: 5
+  +tap_highlight_issue
+  &_img
+    width: 35px
+    height: 35px
+    display: block
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    background-image: url("../img/chat.svg")
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    transition: all .2s ease
+  &_box
+    display: none
+    width: 100vw
+    height: 100vh
+    position: fixed
+    right: 0
+    bottom: 0
+    background: red
+    z-index: 2
+    +MEDIUM
+      width: 500px
+      height: 70vh
+  &_sub1
+    width: $sub_size
+    height: $sub_size
+    position: fixed
+    background: $chat-button-after
+    right: 15px
+    bottom: 15px
+    border-radius: 100%
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
+    border: 4px solid #fff
+    transition: all .5s ease
+    cursor: pointer
+    +tap_highlight_issue
+  &_sub2
+    width: $sub_size
+    height: $sub_size
+    position: fixed
+    background: $chat-button-after
+    right: 15px
+    bottom: 15px
+    border-radius: 100%
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
+    border: 4px solid #fff
+    transition: all .5s ease
+    cursor: pointer
+    +tap_highlight_issue
+  &_sub3
+    width: $sub_size
+    height: $sub_size
+    position: fixed
+    background: $chat-button-after
+    right: 15px
+    bottom: 15px
+    border-radius: 100%
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
+    border: 4px solid #fff
+    transition: all .5s ease
+    cursor: pointer
+    +tap_highlight_issue
+.chat_sub_img
+  width: $sub_img_size
+  height: $sub_img_size
+  display: block
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
+.half_circle
+  width: 0
+  height: 0
+  position: fixed
+  background: $half_circle-back
+  right: -10px
+  bottom: -10px
+  border-radius: 100%
+  cursor: pointer
+  transition: all .4s ease
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
+  border: 4px solid $half_circle-border
+  +tap_highlight_issue
+
+.animate_sub1
+  right: 80px
+  bottom: 5px
+.animate_sub2
+  right: 60px
+  bottom: 60px
+.animate_sub3
+  right: 5px
+  bottom: 80px
+.animate_chat
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
+  // background: $chat-button-after
+.animate_chat_image_before
+  width: 25px
+  height: 25px
+.animate_half_circle
+  width: 300px
+  height: 300px
+  right: -150px
+  bottom: -150px
