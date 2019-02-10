@@ -19,6 +19,8 @@
   &_body
     &_padding
       padding: 0 16px 16px 16px
+      +MEDIUM
+        padding: 0 32px 32px 32px
     &_title
       position: relative
       height: $band-height
@@ -39,6 +41,24 @@
       margin: 20px 0
       font-size: 20px
       color: $article-body-desc-color
+    &_desc_content
+      text-align: left
+      +MEDIUM
+        text-align: justify
+        text-justify: inter-word
+    &_desc_mobile
+      display: block
+      +MEDIUM
+        display: none
+    &_desc_large
+      display: none
+      +MEDIUM
+        display: block
+    &_desc_img
+      max-width: 300px
+      height: auto
+      display: block
+      margin: auto
   &_header
     height: 60px
     line-height: 60px
@@ -164,20 +184,23 @@
   // border-top: 1px dashed #fff
   // border-bottom: 1px dashed #fff
 
+// Mobile chat icon---------------------------
 .chat
-  width: 60px
-  height: 60px
+  width: $chat_width
+  height: $chat_height
   position: fixed
   background: $chat-button
-  right: 5px
-  bottom: 5px
+  right: $chat_right
+  bottom: $chat_bottom
   border-radius: 100%
-  box-shadow: 0 0 20px 0 rgba(0,0,0,0.9)
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
   border: 4px solid #fff
   cursor: pointer
   transition: all .2s ease
-  z-index: 5
+  z-index: 6
   +tap_highlight_issue
+  +MEDIUM
+      display: none
   &_img
     width: 35px
     height: 35px
@@ -191,65 +214,63 @@
     background-repeat: no-repeat
     background-size: cover
     transition: all .2s ease
-  &_box
-    display: none
-    width: 100vw
-    height: 100vh
-    position: fixed
-    right: 0
-    bottom: 0
-    background: red
-    z-index: 2
-    +MEDIUM
-      width: 500px
-      height: 70vh
+
   &_sub1
     width: $sub_size
     height: $sub_size
     position: fixed
     background: $chat-button-after
-    right: 15px
-    bottom: 15px
+    right: $sub_right
+    bottom: $sub_bottom
     border-radius: 100%
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
     border: 4px solid #fff
     transition: all .5s ease
     cursor: pointer
+    z-index: 5
     +tap_highlight_issue
+    +MEDIUM
+      display: none
   &_sub2
     width: $sub_size
     height: $sub_size
     position: fixed
     background: $chat-button-after
-    right: 15px
-    bottom: 15px
+    right: $sub_right
+    bottom: $sub_bottom
     border-radius: 100%
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
     border: 4px solid #fff
     transition: all .5s ease
     cursor: pointer
+    z-index: 5
     +tap_highlight_issue
+    +MEDIUM
+      display: none
   &_sub3
     width: $sub_size
     height: $sub_size
     position: fixed
     background: $chat-button-after
-    right: 15px
-    bottom: 15px
+    right: $sub_right
+    bottom: $sub_bottom
     border-radius: 100%
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
     border: 4px solid #fff
     transition: all .5s ease
     cursor: pointer
+    z-index: 5
     +tap_highlight_issue
-.chat_sub_img
-  width: $sub_img_size
-  height: $sub_img_size
-  display: block
-  position: absolute
-  top: 50%
-  left: 50%
-  transform: translate(-50%,-50%)
+    +MEDIUM
+      display: none
+  &_sub_img
+    width: $sub_img_size
+    height: $sub_img_size
+    display: block
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
 
 .half_circle
   width: 0
@@ -263,8 +284,104 @@
   transition: all .4s ease
   box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
   border: 4px solid $half_circle-border
+  z-index: 5
   +tap_highlight_issue
+  +MEDIUM
+    display: none
 
+// Desktop chat icon---------------------------
+.desktop_chat
+  display: none
+  width: $desktop_chat_width
+  height: $desktop_chat_height
+  position: fixed
+  background: $chat-button
+  right: $desktop_chat_right
+  bottom: $desktop_chat_bottom
+  border-radius: 100%
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
+  border: 4px solid #fff
+  cursor: pointer
+  transition: all .2s ease
+  z-index: 5
+  +tap_highlight_issue
+  +MEDIUM
+    display: block
+  &_img
+    width: 35px
+    height: 35px
+    display: block
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    background-image: url("../img/chat.svg")
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    transition: all .2s ease
+  &_sub1
+    width: $desktop_sub_size
+    height: $desktop_sub_size
+    display: none
+    position: fixed
+    background: $chat-button-after
+    right: $desktop_sub_right
+    bottom: $desktop_sub_bottom
+    border-radius: 100%
+    box-shadow: none
+    border: 4px solid #fff
+    transition: all .5s ease
+    cursor: pointer
+    +tap_highlight_issue
+    +MEDIUM
+      display: block
+  &_sub2
+    width: $desktop_sub_size
+    height: $desktop_sub_size
+    display: none
+    position: fixed
+    background: $chat-button-after
+    right: $desktop_sub_right
+    bottom: $desktop_sub_bottom
+    border-radius: 100%
+    box-shadow: none
+    border: 4px solid #fff
+    transition: all .5s ease
+    cursor: pointer
+    +tap_highlight_issue
+    +MEDIUM
+      display: block
+  &_sub3
+    width: $desktop_sub_size
+    height: $desktop_sub_size
+    display: none
+    position: fixed
+    background: $chat-button-after
+    right: $desktop_sub_right
+    bottom: $desktop_sub_bottom
+    border-radius: 100%
+    box-shadow: none
+    border: 4px solid #fff
+    transition: all .5s ease
+    cursor: pointer
+    +tap_highlight_issue
+    +MEDIUM
+      display: block
+  &_sub_img
+    width: $desktop_sub_img_size
+    height: $desktop_sub_img_size
+    display: block
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+
+// Mobile Animation chat icon---------------------------
+.article_links
+  color: $article_links
+.article_bold
+  font-weight: 600
 .animate_sub1
   right: 80px
   bottom: 5px
@@ -274,14 +391,152 @@
 .animate_sub3
   right: 5px
   bottom: 80px
-.animate_chat
-  box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
-  // background: $chat-button-after
 .animate_chat_image_before
-  width: 25px
-  height: 25px
+  width: 20px
+  height: 20px
+  background-image: url("../img/cross.svg")
+  // width: 25px
+  // height: 25px
 .animate_half_circle
   width: 300px
   height: 300px
   right: -150px
   bottom: -150px
+
+// Mobile Animation chat icon---------------------------
+
+.animate_desktop_sub1
+  right: 70px
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
+.animate_desktop_sub2
+  right: 135px
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
+.animate_desktop_sub3
+  right: 200px
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
+.animate_desktop_chat_image_before
+  width: 20px
+  height: 20px
+  background-image: url("../img/cross.svg")
+
+// Modal---------------------------
+.modal
+  background: rgba(0,0,0,0.9)
+  position: fixed
+  height: 150%
+  width: 100%
+  z-index: 5
+  display: none
+  +noAction
+  +MEDIUM
+    display: none
+
+.chat_box
+  width: 60px
+  height: 60px
+  position: fixed
+  right: $desktop_chat_right
+  bottom: $desktop_chat_bottom
+  background: #F1F1F1
+  border: 4px solid #ffffff
+  box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.5)
+  border-radius: 100%
+  transition: all .5s ease
+  z-index: 6
+  +noAction
+  +MEDIUM
+    width: 500px
+    height: 70vh
+    display: none
+
+.animation_chat_box
+  width: 90vw
+  height: 80vh
+  border-radius: 20px
+  right: $animation_chat_box_right
+  bottom: $animation_chat_box_bottom
+
+.animate_modal
+  display: block
+
+.chat_form
+  display: none
+  transition: all .5s ease
+  width: 100%
+  height: 100%
+  padding: 16px 8px 8px 8px
+  &_box
+    height: calc(100% - 50px)
+    width: 100%
+    background: #fff
+    border-radius: 20px
+    overflow-y: scroll
+  &_input_cover
+    padding-right: 40px
+  &_input
+    width: calc(100% - 40px)
+    display: block
+    margin: 0 auto
+    padding: 8px
+    font-size: 16px
+    border: none
+    border-bottom: 2px dotted #0277BD
+    background-color: #F1F1F1
+    outline: none
+.animation_chat_form
+  display: block
+
+// I am the reciever
+.reciever_avatar
+  &_box
+    width: 100%
+    height: auto
+    padding-top: 10px
+    padding-left: 5px
+    padding-right: 20px
+    display: block
+    +clearfix
+  &_img
+    width: 40px
+    height: 40px
+    float: right
+    position: relative
+    top: 5px
+    border-radius: 100%
+  &_message
+    display: inline-block
+    width: calc(100% - 40px)
+    text-align: right
+    padding: 5px 5px
+    float: right
+    color: $black
+    font-weight: 600
+
+.sender_avatar
+  &_box
+    width: 100%
+    height: auto
+    padding-top: 10px
+    padding-left: 10px
+    padding-right: 5px
+    display: block
+    +clearfix
+  &_img
+    width: 40px
+    height: 40px
+    float: left
+    position: relative
+    top: 5px
+    // border-radius: 100%
+  &_message
+    display: inline-block
+    width: calc(100% - 40px)
+    text-align: left
+    padding: 5px 5px
+    float: left
+    color: $navy
+
+.hide_me
+  display: none
+  width: 0
+  height: 0

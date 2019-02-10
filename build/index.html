@@ -17,6 +17,19 @@
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
+    <div class="modal"></div>
+    <div class="chat_box">
+      <form class="chat_form" action="">
+        <div class="chat_form_box">
+          <div class="reciever_avatar_box"><img class="reciever_avatar_img" src="assets/img/sachin.jpg" alt="facebook">
+            <div class="reciever_avatar_message">Hi there,<br>How can i help?</div>
+          </div>
+        </div>
+        <div class="chat_form_input_cover">
+          <input class="chat_form_input" type="text" name="">
+        </div>
+      </form>
+    </div>
     <div class="main_wrapper">
       <div class="header">
         <div class="header_logo">wda-soft.com</div>
@@ -50,7 +63,15 @@
                       <div class="outer_part_right"></div>
                     </div>
                     <div class="article_body_padding">
-                      <div class="article_body_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam itaque natus quas fugiat ducimus, obcaecati magnam porro soluta reprehenderit a!</div>
+                      <div class="article_body_desc">
+                        <div class="article_body_desc_icon"><img class="article_body_desc_img" src="assets/img/articles/git_branches.png" alt="git"></div>
+                        <div class="article_body_desc_content">
+                          <div class="article_body_desc_large">Learn how to use<span class="article_bold"> Git</span> which is a<span class="article_links"> free</span> and<span class="article_links"> open source distributed version control system</span> designed to handle everything from small to very large projects with speed and efficiency.
+                            This article explains the basic git commands which are frequently used in programming.
+                          </div>
+                          <div class="article_body_desc_mobile">This article explains the basic<span class="span article_bold"> git commands</span> which are frequently used.</div>
+                        </div>
+                      </div>
                       <div class="response_section"><a class="btn float_left" href="/how_git.html">Read More>></a>
                         <div class="comments">
                           <div class="comments_left"><img class="comments_like" src="assets/img/thumb-up.svg" alt="like">
@@ -101,8 +122,7 @@
                     </div>
                   </div>
                   <div class="article_body">
-                    <div class="article_body_title">
-                       TITLE HEADING
+                    <div class="article_body_title">TITLE HEADING
                       <div class="outer_part_left"></div>
                       <div class="outer_part_right"></div>
                     </div>
@@ -130,8 +150,7 @@
                     </div>
                   </div>
                   <div class="article_body">
-                    <div class="article_body_title">
-                       TITLE HEADING
+                    <div class="article_body_title">TITLE HEADING
                       <div class="outer_part_left"></div>
                       <div class="outer_part_right"></div>
                     </div>
@@ -226,7 +245,12 @@
       <div class="chat_sub1"><img class="chat_sub_img" src="assets/img/boss.svg" alt="chat"></div>
       <div class="chat_sub2"><img class="chat_sub_img" src="assets/img/money.svg" alt="chat"></div>
       <div class="chat_sub3"><img class="chat_sub_img" src="assets/img/question.svg" alt="chat"></div>
-      <div class="chat_box"></div>
+      <div class="desktop_chat" id="desktop_chat">
+        <div class="desktop_chat_img"></div>
+      </div>
+      <div class="desktop_chat_sub1"><img class="desktop_chat_sub_img" src="assets/img/boss.svg" alt="chat"></div>
+      <div class="desktop_chat_sub2"><img class="desktop_chat_sub_img" src="assets/img/money.svg" alt="chat"></div>
+      <div class="desktop_chat_sub3"><img class="desktop_chat_sub_img" src="assets/img/question.svg" alt="chat"></div>
     </div>
     <div class="footer">
       <div class="f-rights">Copyright ©2018 All rights reserved</div>

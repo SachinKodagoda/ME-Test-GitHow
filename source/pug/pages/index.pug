@@ -3,6 +3,29 @@ html(lang='en')
   head
     include ../globals/head.pug
   body
+    .modal
+    .chat_box
+      form.chat_form(action="")
+        .chat_form_box
+          .reciever_avatar_box
+            img.reciever_avatar_img(src="assets/img/sachin.jpg", alt="facebook")
+            .reciever_avatar_message
+              | Hi there,
+              br
+              | How can i help?
+          //- .sender_avatar_box
+          //-   img.sender_avatar_img(src="assets/img/users.svg", alt="facebook")
+          //-   .sender_avatar_message
+          //-     | I wanna buy your product. How can i buy it and where can i buy?. Plese give more details
+          //- .reciever_avatar_box
+          //-   img.reciever_avatar_img(src="assets/img/sachin.jpg", alt="facebook")
+          //-   .reciever_avatar_message
+          //-     | Give us your email
+          //-     br
+          //-     | We will contact you soon
+
+        .chat_form_input_cover
+          input.chat_form_input(type="text", name="")
     .main_wrapper
       .header
         .header_logo wda-soft.com
@@ -12,7 +35,6 @@ html(lang='en')
           .header_item.item_disabled CSS
           .header_item.item_disabled JS
           .header_item.item_disabled PHP
-
       .main_container
         .articles
           .article_header HOW?
@@ -39,7 +61,22 @@ html(lang='en')
                       .outer_part_right
                     .article_body_padding
                       .article_body_desc
-                        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam itaque natus quas fugiat ducimus, obcaecati magnam porro soluta reprehenderit a!
+                        .article_body_desc_icon
+                          img.article_body_desc_img(src="assets/img/articles/git_branches.png", alt="git")
+                        .article_body_desc_content
+                          .article_body_desc_large
+                            | Learn how to use
+                            span.article_bold  Git
+                            |  which is a
+                            span.article_links  free
+                            |  and
+                            span.article_links  open source distributed version control system
+                            |  designed to handle everything from small to very large projects with speed and efficiency.
+                            | This article explains the basic git commands which are frequently used in programming.
+                          .article_body_desc_mobile
+                            | This article explains the basic
+                            span.span.article_bold  git commands
+                            |  which are frequently used.
                       .response_section
                         a(href="/how_git.html").btn.float_left Read More>>
                         .comments
@@ -79,7 +116,7 @@ html(lang='en')
                       .fancy_topic ‹-HOW-›
                       .fancy_right
                   .article_body
-                    .article_body_title 
+                    .article_body_title
                       | TITLE HEADING
                       .outer_part_left
                       .outer_part_right
@@ -103,7 +140,7 @@ html(lang='en')
                       .fancy_topic ‹-HOW-›
                       .fancy_right
                   .article_body
-                    .article_body_title 
+                    .article_body_title
                       | TITLE HEADING
                       .outer_part_left
                       .outer_part_right
@@ -168,6 +205,7 @@ html(lang='en')
                         .subscribe-form_group
                           input.subscribe-form_group_input(type="text" placeholder="Your Email Address")
                       .btn.subscribe_btn Subscribe
+
       #chat_icon.chat
         .chat_img
       .half_circle
@@ -177,8 +215,16 @@ html(lang='en')
         img.chat_sub_img(src="assets/img/money.svg", alt="chat")
       .chat_sub3
         img.chat_sub_img(src="assets/img/question.svg", alt="chat")
-      .chat_box
 
+      //- desktop chat icons
+      #desktop_chat.desktop_chat
+        .desktop_chat_img
+      .desktop_chat_sub1
+        img.desktop_chat_sub_img(src="assets/img/boss.svg", alt="chat")
+      .desktop_chat_sub2
+        img.desktop_chat_sub_img(src="assets/img/money.svg", alt="chat")
+      .desktop_chat_sub3
+        img.desktop_chat_sub_img(src="assets/img/question.svg", alt="chat")
     .footer
       .f-rights
         | Copyright ©2018 All rights reserved
