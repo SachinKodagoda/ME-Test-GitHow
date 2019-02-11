@@ -5,12 +5,34 @@
     background: $common-secondary-back
     margin-bottom: 48px
     border: 1px solid $common-border
+    padding: 8px
+    border-radius: 20px
   &_head_img
-    width: 100%
+    width: 150px
     height: auto
+    margin: 0 auto
+    display: block
+  &_head
+    padding: 8px
+  &_second_cover
+    border: 2px solid #666
+    border-radius: 20px
+    background: #fff
   &_body
-    padding: 16px
+    padding: 8px 16px
     &_title
-      text-align: left
-      font-size: 34px
+      text-align: center
+      font-size: 24px
+      font-weight: 600
+      +MEDIUM
+        font-size: 32px
+    &_desc
+      font-size: 20px
+      text-align: center
+    &_charater_primary
+      color: $message_body_character_color_primary
+      font-weight: 600
+
+    &_charater_secondary
+      color: $message_body_character_color_secondary
       font-weight: 600

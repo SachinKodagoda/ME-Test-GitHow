@@ -13,16 +13,16 @@ html(lang='en')
               | Hi there,
               br
               | How can i help?
-          //- .sender_avatar_box
-          //-   img.sender_avatar_img(src="assets/img/users.svg", alt="facebook")
-          //-   .sender_avatar_message
-          //-     | I wanna buy your product. How can i buy it and where can i buy?. Plese give more details
-          //- .reciever_avatar_box
-          //-   img.reciever_avatar_img(src="assets/img/sachin.jpg", alt="facebook")
-          //-   .reciever_avatar_message
-          //-     | Give us your email
-          //-     br
-          //-     | We will contact you soon
+          .sender_avatar_box
+            img.sender_avatar_img(src="assets/img/users.svg", alt="facebook")
+            .sender_avatar_message
+              | I wanna buy your product. How can i buy it and where can i buy?. Plese give more details
+          .reciever_avatar_box
+            img.reciever_avatar_img(src="assets/img/sachin.jpg", alt="facebook")
+            .reciever_avatar_message
+              | Give us your email
+              br
+              | We will contact you soon
 
         .chat_form_input_cover
           input.chat_form_input(type="text", name="")
@@ -160,13 +160,19 @@ html(lang='en')
 
             .right_area.col.s12.l4
               .message_container
-                .message_head
-                  //- img.message_head_img(src="assets/img/profile1.jpg", alt="snowflake")
-                .message_body
-                  .message_body_title TITLE HEADING
-                  .message_body_desc
-                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam itaque natus quas fugiat ducimus, obcaecati magnam porro soluta reprehenderit a!
-                  .btn Read More>>
+                .message_second_cover
+                  .message_head
+                    img.message_head_img(src="assets/img/logo.png", alt="logo")
+                  .message_body
+                      .message_body_title
+                        span.message_body_charater_primary W
+                        span.message_body_charater_secondary izards of
+                        span.message_body_charater_primary  D
+                        span.message_body_charater_secondary igital
+                        span.message_body_charater_primary  A
+                        span.message_body_charater_secondary rts
+                      .message_body_desc
+                        | We are a leading Software Company, grows through creativity, invention and innovation.
               .popular
                 .popular_container
                   .popular_item_first Popular Posts
@@ -188,7 +194,7 @@ html(lang='en')
                       .popular_item_title
                         .popular_item_title_f HTML/CSS
                         .popular_item_title_s flex box
-                  .popular_item
+                  .popular_item.popular_item_last
                     .popular_item_content
                       img.popular_item_img(src="assets/img/temp1.jpg", alt="snowflake")
                       .popular_item_title
